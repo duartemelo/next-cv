@@ -1,10 +1,8 @@
-import Button from "@/components/atom/Button";
+import { Button } from "@/components/atom/Button";
 import Icon from "@/components/atom/Icon";
 import Text from "@/components/atom/Text";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
-
-// TODO: use composition with icons
 
 export default function Profile() {
   return (
@@ -30,29 +28,31 @@ export default function Profile() {
         how it works.&quot;
       </Text>
       <div className="flex gap-4 mt-6">
-        <Button
+        <Button.Root
           className="bg-white px-5 py-1 rounded text-zinc-900 hover:text-white hover:bg-purple-950 transition ease-in-out"
-          leftIcon={
-            <Icon>
-              <AiFillGithub />
-            </Icon>
-          }
           to="https://github.com/duartemelo/"
           target="blank"
         >
+          <Button.LeftIcon>
+            <Icon>
+              <AiFillGithub />
+            </Icon>
+          </Button.LeftIcon>
           GitHub Profile
-        </Button>
-        <Button
+        </Button.Root>
+
+        <Button.Root
           className="bg-white px-5 py-1 rounded text-zinc-900 hover:text-white hover:bg-purple-950 transition ease-in-out"
-          leftIcon={
+          to="https://www.linkedin.com/in/duarteribeiromelo/"
+          target="blank"
+        >
+          <Button.LeftIcon>
             <Icon>
               <AiFillLinkedin />
             </Icon>
-          }
-          to="https://www.linkedin.com/in/duarteribeiromelo/"
-        >
+          </Button.LeftIcon>
           LinkedIn Profile
-        </Button>
+        </Button.Root>
       </div>
     </div>
   );

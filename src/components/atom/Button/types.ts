@@ -9,15 +9,13 @@ enum ButtonTarget {
   self = "_self",
 }
 
-export interface ButtonProps {
+export interface ButtonRootProps {
   children: React.ReactNode;
   to?: string;
   type?: keyof typeof ButtonType;
   target?: keyof typeof ButtonTarget;
   onClick?: () => void;
   disabled?: boolean;
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
   className?: string;
 }
 

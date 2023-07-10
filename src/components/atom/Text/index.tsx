@@ -1,5 +1,7 @@
 import { TextProps, TextWeights, TextAligns, TextSizes } from "./types";
 
+// TODO: colors?
+
 function TextElement(props: TextProps) {
   const { as } = props;
   if (as === "h1") return <h1 {...props}></h1>;
@@ -8,6 +10,7 @@ function TextElement(props: TextProps) {
   if (as === "h4") return <h4 {...props}></h4>;
   if (as === "h5") return <h5 {...props}></h5>;
   if (as === "h6") return <h6 {...props}></h6>;
+  if (as === "a") return <a {...props}></a>;
 
   if (as === "p") return <p {...props}></p>;
 
@@ -17,8 +20,10 @@ function TextElement(props: TextProps) {
 export default function Text({
   children,
   as,
+  href,
+  target = "self",
   className = "",
-  weight = "normal",
+  weight = "regular",
   align = "start",
   italic = false,
   size = "base",
@@ -32,7 +37,12 @@ export default function Text({
   customClassName += ` ${className || ""}`;
 
   return (
-    <TextElement className={customClassName} as={as}>
+    <TextElement
+      className={customClassName}
+      as={as}
+      href={href}
+      target={target}
+    >
       {children}
     </TextElement>
   );

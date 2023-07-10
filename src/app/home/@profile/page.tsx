@@ -1,12 +1,13 @@
 import { Button } from "@/components/atom/Button";
 import Icon from "@/components/atom/Icon";
+import Section from "@/components/atom/Section";
 import Text from "@/components/atom/Text";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 
 export default function Profile() {
   return (
-    <div className="min-h-[500px] h-screen flex flex-col items-center self-center justify-center">
+    <Section className="flex-col">
       <Text
         as="h1"
         size="5xl"
@@ -42,7 +43,7 @@ export default function Profile() {
         </Button.Root>
 
         <Button.Root
-          className="bg-white px-5 py-1 rounded text-zinc-900 hover:text-white hover:bg-purple-950 transition ease-in-out"
+          className="bg-white px-5 py-1 rounded text-zinc-900 hover:text-white hover:bg-blue-600 transition ease-in-out"
           to="https://www.linkedin.com/in/duarteribeiromelo/"
           target="blank"
         >
@@ -54,6 +55,6 @@ export default function Profile() {
           LinkedIn Profile
         </Button.Root>
       </div>
-    </div>
+    </Section>
   );
 }

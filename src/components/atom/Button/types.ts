@@ -10,7 +10,7 @@ enum ButtonTarget {
 }
 
 export interface ButtonRootProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   to?: string;
   type?: keyof typeof ButtonType;
   target?: keyof typeof ButtonTarget;

@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Kanit } from "next/font/google";
 
 const kanit = Kanit({

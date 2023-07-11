@@ -55,6 +55,7 @@ export interface TextProps {
   children: React.ReactNode;
   as?: keyof typeof TextElements;
   href?: string,
+  onClick?: () =>  void;
   target?: keyof typeof AnchorTarget,
   className?: string;
   weight?: keyof typeof TextWeights;

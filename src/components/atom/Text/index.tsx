@@ -21,6 +21,7 @@ export default function Text({
   children,
   as,
   href,
+  onClick,
   target = "self",
   className = "",
   weight = "regular",
@@ -41,6 +42,7 @@ export default function Text({
       className={customClassName}
       as={as}
       href={href}
+      onClick={onClick}
       target={target}
     >
       {children}

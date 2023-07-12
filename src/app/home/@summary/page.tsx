@@ -13,7 +13,6 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/atom/Button";
 import { disableScroll, enableScroll } from "@/utils/scroll";
 
-// TODO: Fix responsive
 export default function Summary() {
   const [cardState, setCardState] = useState(false);
 
@@ -27,7 +26,7 @@ export default function Summary() {
 
   return (
     <>
-      <Section className="gap-10">
+      <Section className="gap-10 flex-col lg:flex-row">
         <div className="flex flex-col flex-1 max-w-[600px]">
           <Text
             as="a"

@@ -9,11 +9,18 @@ import Image from "next/image";
 import profileImage from "@/assets/images/profile.jpg";
 import Card from "@/components/atom/Card";
 import Blur from "@/components/atom/Blur";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/atom/Button";
 import { disableScroll, enableScroll } from "@/utils/scroll";
+import { useDispatch } from "react-redux";
+import { change } from "@/store/scrollSlice";
+import useScrollDetection from "@/hooks/useScrollDetection";
 
 export default function Summary() {
+  const dispatch = useDispatch();
+  const ref = useRef<HTMLDivElement>(null);
+  const inViewport = useScrollDetection(ref);
+
   const [cardState, setCardState] = useState(false);
 
   useEffect(() => {
@@ -22,47 +29,57 @@ export default function Summary() {
     } else {
       enableScroll();
     }
-  });
+  }, [cardState]);
+
+  useEffect(() => {
+    if (inViewport) {
+      dispatch(change("summary"));
+    }
+  }, [inViewport, dispatch]);
 
   return (
     <>
-      <Section className="gap-10 flex-col lg:flex-row">
-        <div className="flex flex-col flex-1 max-w-[600px]">
-          <Text
-            as="a"
-            onClick={() => setCardState(true)}
-            size="4xl"
-            weight="bold"
-            className="text-white cursor-pointer"
-          >
-            Summary
-          </Text>
-          <Text
-            as="p"
-            size="lg"
-            weight="regular"
-            className="text-white mt-4 text-justify"
-          >
-            Junior Front-End Engineer specializing in React (with JavaScript and
-            TypeScript) at Useflow Europa. Passionate about problem-solving and
-            dedicated to delivering high-quality solutions. With a strong
-            foundation in IT engineering, I have demonstrated exceptional
-            analytical thinking and the ability to adapt swiftly to new
-            challenges. Recognized as an award-winning academic achiever, I am
-            committed to continuously updating my skills to stay at the
-            forefront of industry trends. I have recently completed my IT
-            Engineering Bachelor&apos;s degree while gaining valuable hands-on
-            experience through a curricular internship at Useflow Europa.
-          </Text>
-        </div>
-        <div className="flex flex-1 items-center self-center justify-center">
-          <Image
-            src={profileImage}
-            alt="Profile Image"
-            className="max-h-[400px] object-contain"
-          />
-        </div>
-      </Section>
+      <div ref={ref}>
+        <Section className="gap-10 flex-col lg:flex-row">
+          <div className="flex lg:flex-1 flex-col max-w-[800px]">
+            <Text
+              as="a"
+              onClick={() => setCardState(true)}
+              size="4xl"
+              weight="bold"
+              className="text-white cursor-pointer"
+            >
+              Summary
+            </Text>
+            <Text
+              as="p"
+              size="lg"
+              weight="regular"
+              className="text-white mt-4 text-justify"
+            >
+              Junior Front-End Engineer specializing in React (with JavaScript
+              and TypeScript) at Useflow Europa. Passionate about
+              problem-solving and dedicated to delivering high-quality
+              solutions. With a strong foundation in IT engineering, I have
+              demonstrated exceptional analytical thinking and the ability to
+              adapt swiftly to new challenges. Recognized as an award-winning
+              academic achiever, I am committed to continuously updating my
+              skills to stay at the forefront of industry trends. I have
+              recently completed my IT Engineering Bachelor&apos;s degree while
+              gaining valuable hands-on experience through a curricular
+              internship at Useflow Europa.
+            </Text>
+          </div>
+          <div className="flex lg:flex-1 max-w-[800px] items-center self-center justify-center">
+            <Image
+              src={profileImage}
+              alt="Profile Image"
+              className="max-h-[400px] object-contain"
+            />
+          </div>
+        </Section>
+      </div>
+
       {cardState && (
         <Blur onClick={() => setCardState(false)}>
           <Card>

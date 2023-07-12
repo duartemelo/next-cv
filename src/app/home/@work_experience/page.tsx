@@ -5,10 +5,16 @@ import Card from "@/components/atom/Card";
 import Section from "@/components/atom/Section";
 import Text from "@/components/atom/Text";
 import { disableScroll, enableScroll } from "@/utils/scroll";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/atom/Button";
+import { useDispatch } from "react-redux";
+import { change } from "@/store/scrollSlice";
+import useScrollDetection from "@/hooks/useScrollDetection";
 
 export default function WorkExperience() {
+  const dispatch = useDispatch();
+  const ref = useRef<HTMLDivElement>(null);
+  const inViewport = useScrollDetection(ref);
   const [cardState, setCardState] = useState(false);
 
   useEffect(() => {
@@ -17,58 +23,69 @@ export default function WorkExperience() {
     } else {
       enableScroll();
     }
-  });
+  }, [cardState]);
+
+  useEffect(() => {
+    if (inViewport) {
+      dispatch(change("work"));
+    }
+  }, [inViewport, dispatch]);
+
   return (
     <>
-      <Section className="gap-10">
-        <div className="flex flex-col flex-1 max-w-[700px]">
-          <Text
-            as="a"
-            onClick={() => setCardState(true)}
-            size="4xl"
-            weight="bold"
-            className="text-white  cursor-pointer"
-          >
-            Work Experience
-          </Text>
+      <div ref={ref}>
+        <Section className="gap-10">
+          <div className="flex flex-col flex-1 max-w-[700px]">
+            <Text
+              as="a"
+              onClick={() => setCardState(true)}
+              size="4xl"
+              weight="bold"
+              className="text-white  cursor-pointer"
+            >
+              Work Experience
+            </Text>
 
-          {/* TODO: pass this to a work section component */}
+            {/* TODO: pass this to a work section component */}
 
-          <Text as="h3" weight="medium" size="xl" className="text-white mt-4">
-            Remote Front-End Software Engineer at Useflow
-          </Text>
-          <Text as="p" size="base" className="text-white">
-            Working with ReactJS (TS and JS) to implement features on Useflow
-            projects and develop MVPs.
-          </Text>
-          <Text as="p" size="base" className="text-cyan-800">
-            react | javascript | typescript | react router | hooks | redux |
-            styled components
-          </Text>
-          <Text as="h3" weight="medium" size="xl" className="text-white mt-4">
-            Remote Software Engineer Intern at Useflow
-          </Text>
-          <Text as="p" size="base" className="text-white">
-            Worked with ReactJS (TS and JS) to implement user interfaces on
-            Useflow projects and learnt Flutter to implement an MVP mobile app.
-          </Text>
-          <Text as="p" size="base" className="text-cyan-800">
-            react | javascript | typescript | react router | hooks | redux |
-            styled components | flutter
-          </Text>
-          <Text as="h3" weight="medium" size="xl" className="text-white mt-4">
-            Python Developer Intern at Camp Tecnologico Bilbao
-          </Text>
-          <Text as="p" size="base" className="text-white">
-            Coded a semi-humanized robot called Pepper with Python. Erasmus
-            internship.
-          </Text>
-          <Text as="p" size="base" className="text-cyan-800">
-            python
-          </Text>
-        </div>
-        {/* <div className="flex flex-1 items-center self-center justify-center"></div> */}
-      </Section>
+            <Text as="h3" weight="medium" size="xl" className="text-white mt-4">
+              Remote Front-End Software Engineer at Useflow
+            </Text>
+            <Text as="p" size="base" className="text-white">
+              Working with ReactJS (TS and JS) to implement features on Useflow
+              projects and develop MVPs.
+            </Text>
+            <Text as="p" size="base" className="text-cyan-800">
+              react | javascript | typescript | react router | hooks | redux |
+              styled components
+            </Text>
+            <Text as="h3" weight="medium" size="xl" className="text-white mt-4">
+              Remote Software Engineer Intern at Useflow
+            </Text>
+            <Text as="p" size="base" className="text-white">
+              Worked with ReactJS (TS and JS) to implement user interfaces on
+              Useflow projects and learnt Flutter to implement an MVP mobile
+              app.
+            </Text>
+            <Text as="p" size="base" className="text-cyan-800">
+              react | javascript | typescript | react router | hooks | redux |
+              styled components | flutter
+            </Text>
+            <Text as="h3" weight="medium" size="xl" className="text-white mt-4">
+              Python Developer Intern at Camp Tecnologico Bilbao
+            </Text>
+            <Text as="p" size="base" className="text-white">
+              Coded a semi-humanized robot called Pepper with Python. Erasmus
+              internship.
+            </Text>
+            <Text as="p" size="base" className="text-cyan-800">
+              python
+            </Text>
+          </div>
+          {/* <div className="flex flex-1 items-center self-center justify-center"></div> */}
+        </Section>
+      </div>
+
       {cardState && (
         <Blur onClick={() => setCardState(false)}>
           <Card>

@@ -42,17 +42,17 @@ export default function WorkExperience() {
               onClick={() => setCardState(true)}
               size="4xl"
               weight="bold"
-              className="cursor-pointer"
+              className="cursor-pointer text-white"
             >
               Work Experience
             </Text>
 
             {/* TODO: pass this to a work section component */}
 
-            <Text as="h3" weight="medium" size="xl" className="mt-4">
+            <Text as="h3" weight="medium" size="xl" className="mt-4 text-white">
               Remote Front-End Software Engineer at Useflow
             </Text>
-            <Text as="p" size="base">
+            <Text as="p" size="base" className="text-white">
               Working with ReactJS (TS and JS) to implement features on Useflow
               projects and develop MVPs.
             </Text>
@@ -60,10 +60,10 @@ export default function WorkExperience() {
               react | javascript | typescript | react router | hooks | redux |
               styled components
             </Text>
-            <Text as="h3" weight="medium" size="xl" className="mt-4">
+            <Text as="h3" weight="medium" size="xl" className="mt-4 text-white">
               Remote Software Engineer Intern at Useflow
             </Text>
-            <Text as="p" size="base">
+            <Text as="p" size="base" className="text-white">
               Worked with ReactJS (TS and JS) to implement user interfaces on
               Useflow projects and learnt Flutter to implement an MVP mobile
               app.
@@ -72,10 +72,10 @@ export default function WorkExperience() {
               react | javascript | typescript | react router | hooks | redux |
               styled components | flutter
             </Text>
-            <Text as="h3" weight="medium" size="xl" className="mt-4">
+            <Text as="h3" weight="medium" size="xl" className="mt-4 text-white">
               Python Developer Intern at Camp Tecnologico Bilbao
             </Text>
-            <Text as="p" size="base">
+            <Text as="p" size="base" className="text-white">
               Coded a semi-humanized robot called Pepper with Python. Erasmus
               internship.
             </Text>
@@ -108,14 +108,19 @@ export default function WorkExperience() {
                 ></Button.Root>
               </div>
             </div>
-            <Text as="h1" size="3xl" weight="medium" className="mt-6">
+            <Text
+              as="h1"
+              size="3xl"
+              weight="medium"
+              className="mt-6 text-white"
+            >
               Work Experience
             </Text>
             <Text
               as="p"
               size="base"
               weight="light"
-              className="mt-2 text-justify"
+              className="mt-2 text-justify text-white"
             >
               Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
               eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur

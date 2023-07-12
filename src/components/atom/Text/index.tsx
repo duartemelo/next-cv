@@ -29,7 +29,7 @@ export default function Text({
   italic = false,
   size = "base",
 }: TextProps) {
-  let customClassName = "text-white";
+  let customClassName = "";
 
   customClassName += ` ${TextSizes[size]}`;
   customClassName += ` ${TextWeights[weight]}`;

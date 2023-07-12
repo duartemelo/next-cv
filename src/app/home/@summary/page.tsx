@@ -49,7 +49,7 @@ export default function Summary() {
               onClick={() => setCardState(true)}
               size="4xl"
               weight="bold"
-              className="cursor-pointer"
+              className="cursor-pointer text-white"
             >
               Summary
             </Text>
@@ -57,7 +57,7 @@ export default function Summary() {
               as="p"
               size="lg"
               weight="regular"
-              className="mt-4 text-justify"
+              className="mt-4 text-justify text-white"
             >
               Junior Front-End Engineer specializing in React (with JavaScript
               and TypeScript) at Useflow Europa. Passionate about
@@ -103,14 +103,19 @@ export default function Summary() {
                 ></Button.Root>
               </div>
             </div>
-            <Text as="h1" size="3xl" weight="medium" className="mt-6">
+            <Text
+              as="h1"
+              size="3xl"
+              weight="medium"
+              className="text-white mt-6"
+            >
               Summary
             </Text>
             <Text
               as="p"
               size="base"
               weight="light"
-              className="mt-2 text-justify"
+              className="mt-2 text-justify text-white"
             >
               Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
               eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur

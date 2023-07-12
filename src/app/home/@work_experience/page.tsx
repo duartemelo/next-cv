@@ -10,6 +10,7 @@ import { Button } from "@/components/atom/Button";
 import { useDispatch } from "react-redux";
 import { change } from "@/store/scrollSlice";
 import useScrollDetection from "@/hooks/useScrollDetection";
+import { Transition } from "@headlessui/react";
 
 export default function WorkExperience() {
   const dispatch = useDispatch();
@@ -41,17 +42,17 @@ export default function WorkExperience() {
               onClick={() => setCardState(true)}
               size="4xl"
               weight="bold"
-              className="text-white  cursor-pointer"
+              className="cursor-pointer"
             >
               Work Experience
             </Text>
 
             {/* TODO: pass this to a work section component */}
 
-            <Text as="h3" weight="medium" size="xl" className="text-white mt-4">
+            <Text as="h3" weight="medium" size="xl" className="mt-4">
               Remote Front-End Software Engineer at Useflow
             </Text>
-            <Text as="p" size="base" className="text-white">
+            <Text as="p" size="base">
               Working with ReactJS (TS and JS) to implement features on Useflow
               projects and develop MVPs.
             </Text>
@@ -59,10 +60,10 @@ export default function WorkExperience() {
               react | javascript | typescript | react router | hooks | redux |
               styled components
             </Text>
-            <Text as="h3" weight="medium" size="xl" className="text-white mt-4">
+            <Text as="h3" weight="medium" size="xl" className="mt-4">
               Remote Software Engineer Intern at Useflow
             </Text>
-            <Text as="p" size="base" className="text-white">
+            <Text as="p" size="base">
               Worked with ReactJS (TS and JS) to implement user interfaces on
               Useflow projects and learnt Flutter to implement an MVP mobile
               app.
@@ -71,10 +72,10 @@ export default function WorkExperience() {
               react | javascript | typescript | react router | hooks | redux |
               styled components | flutter
             </Text>
-            <Text as="h3" weight="medium" size="xl" className="text-white mt-4">
+            <Text as="h3" weight="medium" size="xl" className="mt-4">
               Python Developer Intern at Camp Tecnologico Bilbao
             </Text>
-            <Text as="p" size="base" className="text-white">
+            <Text as="p" size="base">
               Coded a semi-humanized robot called Pepper with Python. Erasmus
               internship.
             </Text>
@@ -86,7 +87,15 @@ export default function WorkExperience() {
         </Section>
       </div>
 
-      {cardState && (
+      <Transition
+        show={cardState}
+        enter="transition-opacity duration-75"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-150"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
         <Blur onClick={() => setCardState(false)}>
           <Card>
             <div className="w-full flex flex-col">
@@ -99,19 +108,14 @@ export default function WorkExperience() {
                 ></Button.Root>
               </div>
             </div>
-            <Text
-              as="h1"
-              size="3xl"
-              weight="medium"
-              className="text-white mt-6"
-            >
+            <Text as="h1" size="3xl" weight="medium" className="mt-6">
               Work Experience
             </Text>
             <Text
               as="p"
               size="base"
               weight="light"
-              className="text-white mt-2 text-justify"
+              className="mt-2 text-justify"
             >
               Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
               eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur
@@ -136,7 +140,7 @@ export default function WorkExperience() {
             </Text>
           </Card>
         </Blur>
-      )}
+      </Transition>
     </>
   );
 }

@@ -16,6 +16,8 @@ import { useDispatch } from "react-redux";
 import { change } from "@/store/scrollSlice";
 import useScrollDetection from "@/hooks/useScrollDetection";
 
+import { Transition } from "@headlessui/react";
+
 export default function Summary() {
   const dispatch = useDispatch();
   const ref = useRef<HTMLDivElement>(null);
@@ -47,7 +49,7 @@ export default function Summary() {
               onClick={() => setCardState(true)}
               size="4xl"
               weight="bold"
-              className="text-white cursor-pointer"
+              className="cursor-pointer"
             >
               Summary
             </Text>
@@ -55,7 +57,7 @@ export default function Summary() {
               as="p"
               size="lg"
               weight="regular"
-              className="text-white mt-4 text-justify"
+              className="mt-4 text-justify"
             >
               Junior Front-End Engineer specializing in React (with JavaScript
               and TypeScript) at Useflow Europa. Passionate about
@@ -80,7 +82,15 @@ export default function Summary() {
         </Section>
       </div>
 
-      {cardState && (
+      <Transition
+        show={cardState}
+        enter="transition-opacity duration-75"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-150"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
         <Blur onClick={() => setCardState(false)}>
           <Card>
             <div className="w-full flex flex-col">
@@ -93,19 +103,14 @@ export default function Summary() {
                 ></Button.Root>
               </div>
             </div>
-            <Text
-              as="h1"
-              size="3xl"
-              weight="medium"
-              className="text-white mt-6"
-            >
+            <Text as="h1" size="3xl" weight="medium" className="mt-6">
               Summary
             </Text>
             <Text
               as="p"
               size="base"
               weight="light"
-              className="text-white mt-2 text-justify"
+              className="mt-2 text-justify"
             >
               Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
               eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur
@@ -190,7 +195,7 @@ export default function Summary() {
             </Text>
           </Card>
         </Blur>
-      )}
+      </Transition>
     </>
   );
 }

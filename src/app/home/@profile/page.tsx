@@ -27,8 +27,7 @@ export default function Profile() {
         <Text
           as="h1"
           size="5xl"
-          weight="bold"
-          className="text-white"
+          weight="bold"          
           align="center"
         >
           Duarte Melo
@@ -37,7 +36,7 @@ export default function Profile() {
           as="p"
           size="2xl"
           weight="light"
-          className="text-white mt-6"
+          className="mt-6"
           align="center"
           italic={true}
         >

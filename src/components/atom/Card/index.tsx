@@ -5,7 +5,7 @@ interface CardProps {
 
 export default function Card({ children, className }: CardProps) {
   let customClassName =
-    "w-full h-full max-h-[500px] max-w-[800px]  bg-zinc-900 rounded-md border border-zinc-800 shadow-xl p-10";
+    "w-full max-h-full overflow-auto max-w-[1000px]  bg-zinc-900 rounded-md border border-zinc-800 shadow-xl p-10";
   customClassName += ` ${className || ""}`;
   return <div className={customClassName}>{children}</div>;
 }

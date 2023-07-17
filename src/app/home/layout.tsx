@@ -8,6 +8,7 @@ export default function Layout(props: {
   profile: React.ReactNode;
   summary: React.ReactNode;
   work_experience: React.ReactNode;
+  academic_background: React.ReactNode;
 }) {
   return (
     <Provider store={store}>
@@ -16,6 +17,7 @@ export default function Layout(props: {
         {props.profile}
         {props.summary}
         {props.work_experience}
+        {props.academic_background}
       </div>
     </Provider>
   );

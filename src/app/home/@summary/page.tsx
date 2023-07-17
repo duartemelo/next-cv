@@ -3,7 +3,7 @@
 import Section from "@/components/atom/Section";
 import Text from "@/components/atom/Text";
 
-// TODO: create Image component
+// TODO: create Image component (?)
 import Image from "next/image";
 
 import profileImage from "@/assets/images/profile.jpg";

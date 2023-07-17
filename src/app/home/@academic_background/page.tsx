@@ -13,7 +13,7 @@ import useScrollDetection from "@/hooks/useScrollDetection";
 import { Transition } from "@headlessui/react";
 import InsideSection from "@/components/organism/InsideSection";
 
-export default function WorkExperience() {
+export default function AcademicBackground() {
   const dispatch = useDispatch();
   const ref = useRef<HTMLDivElement>(null);
   const inViewport = useScrollDetection(ref);
@@ -29,7 +29,7 @@ export default function WorkExperience() {
 
   useEffect(() => {
     if (inViewport) {
-      dispatch(change("work"));
+      dispatch(change("academic"));
     }
   }, [inViewport, dispatch]);
 
@@ -44,38 +44,23 @@ export default function WorkExperience() {
             weight="bold"
             className="cursor-pointer text-white self-start"
           >
-            Work Experience
+            Academic Background
           </Text>
 
-          {/* TODO: composition pattern? */}
-
           <InsideSection
-            title="Remote Front-End Software Engineer at Useflow"
-            description="Working with ReactJS (TS and JS) to implement features on
-                Useflow projects and develop MVPs."
-            tools="react | javascript | typescript | react router | hooks | redux |
-                styled components"
-            start_at="jun 2023"
-          />
-
-          <InsideSection
-            title="Remote Software Engineer Intern at Useflow"
-            description="Worked with ReactJS (TS and JS) to implement user interfaces on
-            Useflow projects and learnt Flutter to implement an MVP mobile
-            app."
-            tools="react | javascript | typescript | react router | hooks | redux |
-            styled components | flutter"
-            start_at="feb 2023"
+            title="IT Engineering Licentiate Degree - IPCA"
+            description="Do dolor esse sint sit."
+            tools="oop | c# | .net core | mysql | postgresql | sql server | angular | html | css | js | python | c | git | github | scrum"
+            start_at="set 2020"
             finish_at="jun 2023"
           />
 
           <InsideSection
-            title="Python Developer Intern at Camp Tecnologico Bilbao"
-            description="Coded a semi-humanized robot called Pepper with Python. Erasmus
-            internship."
-            tools="python"
-            start_at="jun 2019"
-            finish_at="jul 2019"
+            title="Management and Programming of Computer Systems - epb"
+            description="Do dolor esse sint sit."
+            tools="python | c# | mysql | html | css | js | git | github"
+            start_at="set 2017"
+            finish_at="jun 2020"
           />
         </Section>
       </div>
@@ -107,7 +92,7 @@ export default function WorkExperience() {
               weight="medium"
               className="mt-6 text-white"
             >
-              Work Experience
+              Academic Background
             </Text>
             <Text
               as="p"

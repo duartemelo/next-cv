@@ -11,6 +11,8 @@ export default function Home() {
       return "border-l-8";
     } else if (section === "work") {
       return "border-t-8";
+    } else if (section === "academic") {
+      return "border-r-8";
     } else {
       return "";
     }

@@ -50,10 +50,16 @@ export default function AcademicBackground() {
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
               <InsideSection.Title>
-                IT Engineering Licentiate Degree - IPCA
+                IT Engineering Licentiate Degree - IPCA (15.6/20)
               </InsideSection.Title>
               <InsideSection.Description>
-                Do dolor esse sint sit.
+                Object-Oriented Programming in C# and software development
+                project with Entity Framework and SQL Server.
+                <br />
+                Web Development with AngularJS and creating a Web API using
+                Flask in Python.
+                <br />
+                Computer Vision in C and Language Processing in Python.
               </InsideSection.Description>
               <InsideSection.Tools>
                 oop | c# | .net core | mysql | postgresql | sql server | angular
@@ -67,10 +73,13 @@ export default function AcademicBackground() {
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
               <InsideSection.Title>
-                Management and Programming of Computer Systems - epb
+                Management and Programming of Computer Systems - epb (19/20)
               </InsideSection.Title>
               <InsideSection.Description>
-                Do dolor esse sint sit.
+                Professional High School Course - programming basics
+                <br />
+                Final Project - FeedyVet - made using React and Firebase and
+                received a grade of 20/20.
               </InsideSection.Description>
               <InsideSection.Tools>
                 python | c# | mysql | html | css | js | git | github

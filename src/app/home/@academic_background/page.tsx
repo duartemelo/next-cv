@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { change } from "@/store/scrollSlice";
 import useScrollDetection from "@/hooks/useScrollDetection";
 import { Transition } from "@headlessui/react";
-import InsideSection from "@/components/organism/InsideSection";
+import { InsideSection } from "@/components/organism/InsideSection";
 
 export default function AcademicBackground() {
   const dispatch = useDispatch();
@@ -47,21 +47,38 @@ export default function AcademicBackground() {
             Academic Background
           </Text>
 
-          <InsideSection
-            title="IT Engineering Licentiate Degree - IPCA"
-            description="Do dolor esse sint sit."
-            tools="oop | c# | .net core | mysql | postgresql | sql server | angular | html | css | js | python | c | git | github | scrum"
-            start_at="set 2020"
-            finish_at="jun 2023"
-          />
+          <InsideSection.Root>
+            <div className="flex flex-col md:flex-1">
+              <InsideSection.Title>
+                IT Engineering Licentiate Degree - IPCA
+              </InsideSection.Title>
+              <InsideSection.Description>
+                Do dolor esse sint sit.
+              </InsideSection.Description>
+              <InsideSection.Tools>
+                oop | c# | .net core | mysql | postgresql | sql server | angular
+                | html | css | js | python | c | git | github | scrum
+              </InsideSection.Tools>
+            </div>
 
-          <InsideSection
-            title="Management and Programming of Computer Systems - epb"
-            description="Do dolor esse sint sit."
-            tools="python | c# | mysql | html | css | js | git | github"
-            start_at="set 2017"
-            finish_at="jun 2020"
-          />
+            <InsideSection.Interval start_at="set 2020" finish_at="jun 2023" />
+          </InsideSection.Root>
+
+          <InsideSection.Root>
+            <div className="flex flex-col md:flex-1">
+              <InsideSection.Title>
+                Management and Programming of Computer Systems - epb
+              </InsideSection.Title>
+              <InsideSection.Description>
+                Do dolor esse sint sit.
+              </InsideSection.Description>
+              <InsideSection.Tools>
+                python | c# | mysql | html | css | js | git | github
+              </InsideSection.Tools>
+            </div>
+
+            <InsideSection.Interval start_at="set 2017" finish_at="jun 2020" />
+          </InsideSection.Root>
         </Section>
       </div>
 

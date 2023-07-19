@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { change } from "@/store/scrollSlice";
 import useScrollDetection from "@/hooks/useScrollDetection";
 import { Transition } from "@headlessui/react";
-import InsideSection from "@/components/organism/InsideSection";
+import { InsideSection } from "@/components/organism/InsideSection";
 
 export default function WorkExperience() {
   const dispatch = useDispatch();
@@ -47,36 +47,57 @@ export default function WorkExperience() {
             Work Experience
           </Text>
 
-          {/* TODO: composition pattern? */}
+          <InsideSection.Root>
+            <div className="flex flex-col md:flex-1">
+              <InsideSection.Title>
+                Remote Front-End Software Engineer at Useflow
+              </InsideSection.Title>
+              <InsideSection.Description>
+                Working with ReactJS (TS and JS) to implement features on
+                Useflow projects and develop MVPs.
+              </InsideSection.Description>
+              <InsideSection.Tools>
+                react | javascript | typescript | react router | hooks | redux |
+                styled components
+              </InsideSection.Tools>
+            </div>
 
-          <InsideSection
-            title="Remote Front-End Software Engineer at Useflow"
-            description="Working with ReactJS (TS and JS) to implement features on
-                Useflow projects and develop MVPs."
-            tools="react | javascript | typescript | react router | hooks | redux |
-                styled components"
-            start_at="jun 2023"
-          />
+            <InsideSection.Interval start_at="jun 2023" />
+          </InsideSection.Root>
 
-          <InsideSection
-            title="Remote Software Engineer Intern at Useflow"
-            description="Worked with ReactJS (TS and JS) to implement user interfaces on
-            Useflow projects and learnt Flutter to implement an MVP mobile
-            app."
-            tools="react | javascript | typescript | react router | hooks | redux |
-            styled components | flutter"
-            start_at="feb 2023"
-            finish_at="jun 2023"
-          />
+          <InsideSection.Root>
+            <div className="flex flex-col md:flex-1">
+              <InsideSection.Title>
+                Remote Software Engineer Intern at Useflow
+              </InsideSection.Title>
+              <InsideSection.Description>
+                Worked with ReactJS (TS and JS) to implement user interfaces on
+                Useflow projects and learnt Flutter to implement an MVP mobile
+                app.
+              </InsideSection.Description>
+              <InsideSection.Tools>
+                react | javascript | typescript | react router | hooks | redux |
+                styled components | flutter
+              </InsideSection.Tools>
+            </div>
 
-          <InsideSection
-            title="Python Developer Intern at Camp Tecnologico Bilbao"
-            description="Coded a semi-humanized robot called Pepper with Python. Erasmus
-            internship."
-            tools="python"
-            start_at="jun 2019"
-            finish_at="jul 2019"
-          />
+            <InsideSection.Interval start_at="feb 2023" finish_at="jun 2023" />
+          </InsideSection.Root>
+
+          <InsideSection.Root>
+            <div className="flex flex-col md:flex-1">
+              <InsideSection.Title>
+                Python Developer Intern at Camp Tecnologico Bilbao
+              </InsideSection.Title>
+              <InsideSection.Description>
+                Coded a semi-humanized robot called Pepper with Python. Erasmus
+                internship.
+              </InsideSection.Description>
+              <InsideSection.Tools>python</InsideSection.Tools>
+            </div>
+
+            <InsideSection.Interval start_at="jun 2019" finish_at="jul 2019" />
+          </InsideSection.Root>
         </Section>
       </div>
 

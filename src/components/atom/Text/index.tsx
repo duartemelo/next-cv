@@ -1,6 +1,7 @@
+import { twMerge } from "tailwind-merge";
 import { TextProps, TextWeights, TextAligns, TextSizes } from "./types";
 
-// TODO: colors?
+// TODO: colors? (variants?)
 
 function TextElement(props: TextProps) {
   const { as } = props;
@@ -29,13 +30,13 @@ export default function Text({
   italic = false,
   size = "base",
 }: TextProps) {
-  let customClassName = "";
-
-  customClassName += ` ${TextSizes[size]}`;
-  customClassName += ` ${TextWeights[weight]}`;
-  customClassName += ` ${TextAligns[align]}`;
-  customClassName += ` ${italic ? "italic" : "not-italic"}`;
-  customClassName += ` ${className || ""}`;
+  let customClassName = twMerge(
+    TextSizes[size],
+    TextWeights[weight],
+    TextAligns[align],
+    italic ? "italic" : "not-italic",
+    className
+  );
 
   return (
     <TextElement

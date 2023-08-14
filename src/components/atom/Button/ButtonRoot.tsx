@@ -1,14 +1,15 @@
 import Link from "next/link";
 import { ButtonRootProps } from "./types";
+import { twMerge } from "tailwind-merge";
 
 function ButtonType({
   children,
   to,
-  type = "submit",
-  target = "self",
+  type,
+  target,
   onClick,
-  disabled = false,
-  className = "",
+  disabled,
+  className,
 }: ButtonRootProps) {
   if (to) {
     return (
@@ -43,10 +44,11 @@ export default function ButtonRoot({
   target = "self",
   onClick,
   disabled = false,
-  className = "",
+  className,
 }: ButtonRootProps) {
-  let customClassName = "flex items-center gap-2";
-  customClassName += ` ${className || ""}`;
+  
+  let customClassName = twMerge("flex items-center gap-2", className);
+  
   return (
     <ButtonType
       to={to}

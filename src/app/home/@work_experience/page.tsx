@@ -18,6 +18,8 @@ import Text from "@/components/atom/Text";
 
 import { InsideSection } from "@/components/organism/InsideSection";
 
+// TODO: add card text
+
 export default function WorkExperience() {
   const dispatch = useDispatch();
   const ref = useRef<HTMLDivElement>(null);

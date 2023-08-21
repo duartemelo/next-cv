@@ -9,6 +9,7 @@ export default function Layout(props: {
   summary: React.ReactNode;
   work_experience: React.ReactNode;
   academic_background: React.ReactNode;
+  projects: React.ReactNode;
 }) {
   return (
     <Provider store={store}>
@@ -18,6 +19,7 @@ export default function Layout(props: {
         {props.summary}
         {props.work_experience}
         {props.academic_background}
+        {props.projects}
       </div>
     </Provider>
   );

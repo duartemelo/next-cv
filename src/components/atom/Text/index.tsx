@@ -1,6 +1,8 @@
 import { twMerge } from "tailwind-merge";
 import { TextProps, TextWeights, TextAligns, TextSizes } from "./types";
 
+// TODO: variants / styles
+
 function TextElement(props: TextProps) {
   const { as } = props;
   if (as === "h1") return <h1 {...props}></h1>;

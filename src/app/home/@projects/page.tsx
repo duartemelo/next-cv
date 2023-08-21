@@ -17,8 +17,6 @@ export default function Projects() {
   const ref = useRef<HTMLDivElement>(null);
   const inViewport = useScrollDetection(ref);
 
-  // TODO: link to projects
-
   useEffect(() => {
     if (inViewport) {
       dispatch(change("projects"));
@@ -40,7 +38,9 @@ export default function Projects() {
 
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
-              <InsideSection.Title>React Movies App</InsideSection.Title>
+              <InsideSection.Title href="https://github.com/duartemelo/react-movies-app">
+                React Movies App
+              </InsideSection.Title>
               <InsideSection.Description>
                 A web app that lists movies from the Movie Database API.
                 <br />
@@ -56,7 +56,9 @@ export default function Projects() {
           </InsideSection.Root>
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
-              <InsideSection.Title>IPMA Discord Bot</InsideSection.Title>
+              <InsideSection.Title href="https://github.com/duartemelo/IPMADiscordBot">
+                IPMA Discord Bot
+              </InsideSection.Title>
               <InsideSection.Description>
                 A bot that consists in sending a city&apos;s (or multiple
                 cities&apos;) weather info for a Discord chat channel.
@@ -100,7 +102,9 @@ export default function Projects() {
           </InsideSection.Root>
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
-              <InsideSection.Title>FeedyVet</InsideSection.Title>
+              <InsideSection.Title href="https://github.com/duartemelo/FeedyVet">
+                FeedyVet
+              </InsideSection.Title>
               <InsideSection.Description>
                 Manage your domestic animals in a simple and easy way with a web
                 app that connects veterinary clinics and their clients.

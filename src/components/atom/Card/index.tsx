@@ -9,9 +9,14 @@ interface CardProps {
 }
 
 export default function Card({ children, className }: CardProps) {
-  let customClassName = twMerge(
-    "w-full max-h-full overflow-auto max-w-[1000px]  bg-zinc-900 rounded-md border border-zinc-800 shadow-xl p-10 animate-fade",
-    className
+  return (
+    <div
+      className={twMerge(
+        "w-full max-h-full overflow-auto max-w-[1000px]  bg-zinc-900 rounded-md border border-zinc-800 shadow-xl p-10 animate-fade",
+        className
+      )}
+    >
+      {children}
+    </div>
   );
-  return <div className={customClassName}>{children}</div>;
 }

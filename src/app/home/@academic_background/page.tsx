@@ -50,7 +50,7 @@ export default function AcademicBackground() {
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
               <InsideSection.Title>
-                IT Engineering Licentiate Degree - IPCA (15.6/20)
+                IT Engineering Licentiate Degree - IPCA (15/20)
               </InsideSection.Title>
               <InsideSection.Description>
                 Object-Oriented Programming in C# and software development

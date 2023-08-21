@@ -47,8 +47,6 @@ export default function ButtonRoot({
   className,
 }: ButtonRootProps) {
   
-  let customClassName = twMerge("flex items-center gap-2", className);
-  
   return (
     <ButtonType
       to={to}
@@ -56,7 +54,7 @@ export default function ButtonRoot({
       target={target}
       onClick={onClick}
       disabled={disabled}
-      className={customClassName}
+      className={twMerge("flex items-center gap-2", className)}
     >
       {children}
     </ButtonType>

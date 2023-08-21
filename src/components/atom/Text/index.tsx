@@ -1,8 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { TextProps, TextWeights, TextAligns, TextSizes } from "./types";
 
-// TODO: colors? (variants?)
-
 function TextElement(props: TextProps) {
   const { as } = props;
   if (as === "h1") return <h1 {...props}></h1>;
@@ -30,17 +28,15 @@ export default function Text({
   italic = false,
   size = "base",
 }: TextProps) {
-  let customClassName = twMerge(
-    TextSizes[size],
-    TextWeights[weight],
-    TextAligns[align],
-    italic ? "italic" : "not-italic",
-    className
-  );
-
   return (
     <TextElement
-      className={customClassName}
+      className={twMerge(
+        TextSizes[size],
+        TextWeights[weight],
+        TextAligns[align],
+        italic ? "italic" : "not-italic",
+        className
+      )}
       as={as}
       href={href}
       onClick={onClick}

@@ -1,5 +1,6 @@
 import Text from "@/components/atom/Text";
-import Image from "next/image";
+import Image from "@/components/atom/Image";
+
 import jobCurrentImage from "@/assets/images/job-current.svg";
 import jobDoneImage from "@/assets/images/job-done.svg";
 

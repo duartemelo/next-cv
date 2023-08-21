@@ -2,9 +2,7 @@
 
 import Section from "@/components/atom/Section";
 import Text from "@/components/atom/Text";
-
-// TODO: create Image component (?)
-import Image from "next/image";
+import Image from "@/components/atom/Image";
 
 import profileImage from "@/assets/images/profile.jpg";
 import Card from "@/components/atom/Card";

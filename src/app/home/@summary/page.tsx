@@ -115,86 +115,36 @@ export default function Summary() {
               weight="light"
               className="mt-2 text-justify text-white"
             >
-              Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
-              eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur
-              velit occaecat. Consectetur minim dolor ex excepteur ut nisi qui.
-              Cillum sit eu non ea pariatur in ipsum proident non labore culpa
-              pariatur. In aliquip fugiat eiusmod tempor. Veniam esse deserunt
-              minim consequat consequat. Minim proident aute id duis magna do
-              in. Occaecat sint in Lorem fugiat anim officia dolore anim sunt
-              pariatur et proident exercitation. Excepteur laborum do velit
-              veniam magna velit velit irure laborum cupidatat. Dolor
-              exercitation et minim consectetur do anim labore culpa nisi nisi
-              esse. Amet irure culpa amet occaecat fugiat officia et sit minim
-              sit ea exercitation nulla cupidatat. Sit veniam eu cupidatat esse
-              irure. Exercitation aliquip ullamco culpa aliquip quis enim anim
-              proident excepteur velit. Cupidatat anim laboris adipisicing
-              veniam eiusmod nisi mollit duis labore cillum cupidatat labore ad.
-              In cillum sunt anim in id. Culpa tempor do nisi enim veniam velit
-              ipsum sit fugiat nisi exercitation excepteur irure. Deserunt sint
-              culpa ex laboris incididunt nisi voluptate reprehenderit aute sit
-              non irure. Nisi amet amet officia ipsum est. Consectetur elit
-              proident officia Lorem labore eu tempor id sint magna anim anim.
-              Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
-              eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur
-              velit occaecat. Consectetur minim dolor ex excepteur ut nisi qui.
-              Cillum sit eu non ea pariatur in ipsum proident non labore culpa
-              pariatur. In aliquip fugiat eiusmod tempor. Veniam esse deserunt
-              minim consequat consequat. Minim proident aute id duis magna do
-              in. Occaecat sint in Lorem fugiat anim officia dolore anim sunt
-              pariatur et proident exercitation. Excepteur laborum do velit
-              veniam magna velit velit irure laborum cupidatat. Dolor
-              exercitation et minim consectetur do anim labore culpa nisi nisi
-              esse. Amet irure culpa amet occaecat fugiat officia et sit minim
-              sit ea exercitation nulla cupidatat. Sit veniam eu cupidatat esse
-              irure. Exercitation aliquip ullamco culpa aliquip quis enim anim
-              proident excepteur velit. Cupidatat anim laboris adipisicing
-              veniam eiusmod nisi mollit duis labore cillum cupidatat labore ad.
-              In cillum sunt anim in id. Culpa tempor do nisi enim veniam velit
-              ipsum sit fugiat nisi exercitation excepteur irure. Deserunt sint
-              culpa ex laboris incididunt nisi voluptate reprehenderit aute sit
-              non irure. Nisi amet amet officia ipsum est. Consectetur elit
-              proident officia Lorem labore eu tempor id sint magna anim anim.
-              Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
-              eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur
-              velit occaecat. Consectetur minim dolor ex excepteur ut nisi qui.
-              Cillum sit eu non ea pariatur in ipsum proident non labore culpa
-              pariatur. In aliquip fugiat eiusmod tempor. Veniam esse deserunt
-              minim consequat consequat. Minim proident aute id duis magna do
-              in. Occaecat sint in Lorem fugiat anim officia dolore anim sunt
-              pariatur et proident exercitation. Excepteur laborum do velit
-              veniam magna velit velit irure laborum cupidatat. Dolor
-              exercitation et minim consectetur do anim labore culpa nisi nisi
-              esse. Amet irure culpa amet occaecat fugiat officia et sit minim
-              sit ea exercitation nulla cupidatat. Sit veniam eu cupidatat esse
-              irure. Exercitation aliquip ullamco culpa aliquip quis enim anim
-              proident excepteur velit. Cupidatat anim laboris adipisicing
-              veniam eiusmod nisi mollit duis labore cillum cupidatat labore ad.
-              In cillum sunt anim in id. Culpa tempor do nisi enim veniam velit
-              ipsum sit fugiat nisi exercitation excepteur irure. Deserunt sint
-              culpa ex laboris incididunt nisi voluptate reprehenderit aute sit
-              non irure. Nisi amet amet officia ipsum est. Consectetur elit
-              proident officia Lorem labore eu tempor id sint magna anim anim.
-              Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
-              eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur
-              velit occaecat. Consectetur minim dolor ex excepteur ut nisi qui.
-              Cillum sit eu non ea pariatur in ipsum proident non labore culpa
-              pariatur. In aliquip fugiat eiusmod tempor. Veniam esse deserunt
-              minim consequat consequat. Minim proident aute id duis magna do
-              in. Occaecat sint in Lorem fugiat anim officia dolore anim sunt
-              pariatur et proident exercitation. Excepteur laborum do velit
-              veniam magna velit velit irure laborum cupidatat. Dolor
-              exercitation et minim consectetur do anim labore culpa nisi nisi
-              esse. Amet irure culpa amet occaecat fugiat officia et sit minim
-              sit ea exercitation nulla cupidatat. Sit veniam eu cupidatat esse
-              irure. Exercitation aliquip ullamco culpa aliquip quis enim anim
-              proident excepteur velit. Cupidatat anim laboris adipisicing
-              veniam eiusmod nisi mollit duis labore cillum cupidatat labore ad.
-              In cillum sunt anim in id. Culpa tempor do nisi enim veniam velit
-              ipsum sit fugiat nisi exercitation excepteur irure. Deserunt sint
-              culpa ex laboris incididunt nisi voluptate reprehenderit aute sit
-              non irure. Nisi amet amet officia ipsum est. Consectetur elit
-              proident officia Lorem labore eu tempor id sint magna anim anim.
+              Throughout my entire life, I have always maintained a strong
+              connection with the IT world. Even as a young child, before I even
+              knew how to read, I could operate a computer and engage in gaming.
+              As I progressed through school, I faced the pivotal decision of
+              choosing a career path. While the answer might be clear to you, it
+              wasn&apos;t so evident to me back then. I found myself torn
+              between pursuing a career in music or one as an IT engineer.
+              <br />
+              Today, I am immensely content with my choice to follow the IT
+              path. Despite being a passionate music enthusiast, I derive great
+              satisfaction from problem-solving and possess an inherent
+              curiosity about the inner workings of things - qualities that
+              align well with the role of an engineer.
+              <br />
+              At the age of 15, I enrolled in the Management and Programming of
+              Computer Systems Course at Escola Profissional de Braga. This
+              experience provided me with a foundation in programming, enabling
+              me to undertake my initial projects and achieve noteworthy grades,
+              subsequently earning me merit awards.
+              <br />
+              Following the completion of this course, I continued my education
+              at IPCA to pursue a degree in IT Engineering. This phase allowed
+              me to refine my IT Engineering skills and transform into a
+              qualified engineer.
+              <br />
+              Despite my passion for learning, I opted to take a break after
+              obtaining my IT Engineering degree and entered the workforce as a
+              developer. Frontend technologies have always held a special allure
+              for me, prompting me to embark on a career as a Frontend Engineer
+              at Useflow, where I am engaged in React-based projects.
             </Text>
           </Card>
         </Blur>

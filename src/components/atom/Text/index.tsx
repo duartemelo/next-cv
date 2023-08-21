@@ -6,7 +6,7 @@ import { TextProps, TextWeights, TextAligns, TextSizes } from "./types";
 function TextElement(props: TextProps) {
   const { as, href } = props;
   if (href) return <a {...props}></a>;
-  
+
   if (as === "h1") return <h1 {...props}></h1>;
   if (as === "h2") return <h2 {...props}></h2>;
   if (as === "h3") return <h3 {...props}></h3>;

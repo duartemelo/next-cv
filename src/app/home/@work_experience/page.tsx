@@ -1,16 +1,21 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { Transition } from "@headlessui/react";
+
+import { change } from "@/store/scrollSlice";
+
+import useScrollDetection from "@/hooks/useScrollDetection";
+
+import { disableScroll, enableScroll } from "@/utils/scroll";
+
+import { Button } from "@/components/atom/Button";
 import Blur from "@/components/atom/Blur";
 import Card from "@/components/atom/Card";
 import Section from "@/components/atom/Section";
 import Text from "@/components/atom/Text";
-import { disableScroll, enableScroll } from "@/utils/scroll";
-import { useEffect, useRef, useState } from "react";
-import { Button } from "@/components/atom/Button";
-import { useDispatch } from "react-redux";
-import { change } from "@/store/scrollSlice";
-import useScrollDetection from "@/hooks/useScrollDetection";
-import { Transition } from "@headlessui/react";
+
 import { InsideSection } from "@/components/organism/InsideSection";
 
 export default function WorkExperience() {

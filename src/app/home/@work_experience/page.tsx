@@ -18,8 +18,6 @@ import Text from "@/components/atom/Text";
 
 import { InsideSection } from "@/components/organism/InsideSection";
 
-// TODO: add card text
-
 export default function WorkExperience() {
   const dispatch = useDispatch();
   const ref = useRef<HTMLDivElement>(null);
@@ -57,7 +55,7 @@ export default function WorkExperience() {
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
               <InsideSection.Title>
-                Remote Front-End Software Engineer at Useflow
+                Remote Frontend Software Engineer at Useflow
               </InsideSection.Title>
               <InsideSection.Description>
                 Working with ReactJS (TS and JS) to implement features on
@@ -143,26 +141,37 @@ export default function WorkExperience() {
               weight="light"
               className="mt-2 text-justify text-white"
             >
-              Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
-              eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur
-              velit occaecat. Consectetur minim dolor ex excepteur ut nisi qui.
-              Cillum sit eu non ea pariatur in ipsum proident non labore culpa
-              pariatur. In aliquip fugiat eiusmod tempor. Veniam esse deserunt
-              minim consequat consequat. Minim proident aute id duis magna do
-              in. Occaecat sint in Lorem fugiat anim officia dolore anim sunt
-              pariatur et proident exercitation. Excepteur laborum do velit
-              veniam magna velit velit irure laborum cupidatat. Dolor
-              exercitation et minim consectetur do anim labore culpa nisi nisi
-              esse. Amet irure culpa amet occaecat fugiat officia et sit minim
-              sit ea exercitation nulla cupidatat. Sit veniam eu cupidatat esse
-              irure. Exercitation aliquip ullamco culpa aliquip quis enim anim
-              proident excepteur velit. Cupidatat anim laboris adipisicing
-              veniam eiusmod nisi mollit duis labore cillum cupidatat labore ad.
-              In cillum sunt anim in id. Culpa tempor do nisi enim veniam velit
-              ipsum sit fugiat nisi exercitation excepteur irure. Deserunt sint
-              culpa ex laboris incididunt nisi voluptate reprehenderit aute sit
-              non irure. Nisi amet amet officia ipsum est. Consectetur elit
-              proident officia Lorem labore eu tempor id sint magna anim anim.
+              My journey as a developer began in 2019 when I undertook an
+              internship at Camp Tecnologico in Bilbao during my month-long
+              Erasmus program there. Upon knowing that I had been accepted for
+              the Erasmus internship, I felt a surge of happiness and pride in
+              myself, as only the most outstanding students were chosen.
+              <br />
+              During this internship, I had the opportunity to work with a
+              semi-humanized robot named Pepper, utilizing Python. While my
+              Python scripts were relatively simple, considering my level of
+              knowledge at that time, they were already remarkable. The
+              internship supervisor was astounded by my ability to research the
+              robot and control it using a gamepad.
+              <br />
+              Following this experience, in 2020, I pursued another internship
+              at lluni software - a company specializing in software development
+              for insurance companies. During this stint, I engaged in research
+              focused on API benchmarking and APM software, including tools like
+              Kibana.
+              <br />
+              Subsequently, I enrolled in the IT Engineering Bachelor&apos;s
+              degree program at IPCA. One of the noteworthy aspects of this
+              course was the inclusion of a mandatory internship in the final
+              year. I completed this internship at Useflow Europa, primarily
+              focusing on React development. I also took the opportunity to
+              learn Flutter and successfully developed an MVP mobile app.
+              <br />
+              As a result of my performance, Useflow expressed interest in
+              hiring me as a Frontend Engineer. In my current role, I am engaged
+              in developing features for Useflow&apos;s core projects, utilizing
+              technologies such as React, TypeScript, Redux, Styled Components,
+              and Tailwind, among others.
             </Text>
           </Card>
         </Blur>

@@ -34,7 +34,8 @@ export default function Layout(props: {
       shortcut: ["e"],
       keywords: "send-email",
       section: "General",
-      perform: () => window.open('mailto:duarteribeirodemelo@hotmail.com', '_blank'),
+      perform: () =>
+        window.open("mailto:duarteribeirodemelo@hotmail.com", "_blank"),
       // icon: <Icon className="ri-mail-line" />,
     },
     {
@@ -79,7 +80,7 @@ export default function Layout(props: {
       shortcut: ["f", "g"],
       keywords: "go-github",
       section: "Follow",
-      perform: () => window.open('https://github.com/duartemelo', '_blank'),
+      perform: () => window.open("https://github.com/duartemelo", "_blank"),
       // icon: <Icon className="ri-github-line" />,
     },
     {
@@ -88,17 +89,24 @@ export default function Layout(props: {
       shortcut: ["f", "l"],
       keywords: "go-linkedin",
       section: "Follow",
-      perform: () => window.open('https://www.linkedin.com/in/duarteribeiromelo/', '_blank'),
+      perform: () =>
+        window.open("https://www.linkedin.com/in/duarteribeiromelo/", "_blank"),
       // icon: <Icon className="ri-linkedin-line" />,
     },
   ];
 
+  // TODO: pass styles to another file?
+  // TODO: create component for Kbar?
+
   return (
     <KBarProvider actions={actions}>
       <KBarPortal>
-        <KBarPositioner>
-          <KBarAnimator>
-            <KBarSearch placeholder="Enter a command or search..." />
+        <KBarPositioner className="fixed flex items-start justify-center w-full inset-0 bg-[rgba(0,0,0,0.8)] box-border">
+          <KBarAnimator className="p-12 w-full max-w-[600px]">
+            <KBarSearch
+              placeholder="Enter a command or search..."
+              className="px-4 py-2 text-base w-full box-border outline-none border-none m-0 bg-zinc-800 text-white"
+            />
             <RenderResults />
           </KBarAnimator>
         </KBarPositioner>
@@ -123,12 +131,12 @@ function RenderResults() {
       items={results}
       onRender={({ item, active }) =>
         typeof item === "string" ? (
-          <div>{item}</div>
+          <div className="text-white text-sm py-2 bg-zinc-800">{item}</div>
         ) : (
           <div
-            style={{
-              background: active ? "#eee" : "transparent",
-            }}
+            className={`text-white cursor-pointer ${
+              active ? "bg-zinc-400" : "bg-zinc-800"
+            }`}
           >
             {item.name}
           </div>

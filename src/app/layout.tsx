@@ -19,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={kanit.className}>{children}</body>
+      <body className={`${kanit.className} bg-[var(--primary)]`}>
+        {children}
+      </body>
     </html>
   );
 }

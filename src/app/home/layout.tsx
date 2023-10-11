@@ -94,18 +94,17 @@ export default function Layout(props: {
       // icon: <Icon className="ri-linkedin-line" />,
     },
   ];
-
-  // TODO: pass styles to another file?
-  // TODO: create component for Kbar?
+  // TODO: create component for Kbar
+  // TODO: action shortcut
 
   return (
     <KBarProvider actions={actions}>
       <KBarPortal>
         <KBarPositioner className="fixed flex items-start justify-center w-full inset-0 bg-[rgba(0,0,0,0.8)] box-border">
-          <KBarAnimator className="p-12 w-full max-w-[600px]">
+          <KBarAnimator className=" w-full max-w-[700px] rounded overflow-hidden backdrop-blur-sm">
             <KBarSearch
               placeholder="Enter a command or search..."
-              className="px-4 py-2 text-base w-full box-border outline-none border-none m-0 bg-zinc-800 text-white"
+              className="px-4 py-3 text-base w-full box-border outline-none border-none m-0 bg-[rgba(255,255,255,0.1)] text-white"
             />
             <RenderResults />
           </KBarAnimator>
@@ -131,11 +130,15 @@ function RenderResults() {
       items={results}
       onRender={({ item, active }) =>
         typeof item === "string" ? (
-          <div className="text-white text-sm py-2 bg-zinc-800">{item}</div>
+          <div className="text-[#aaa] text-sm pt-2 px-2 bg-[rgba(255,255,255,0.1)]">
+            {item}
+          </div>
         ) : (
           <div
-            className={`text-white cursor-pointer ${
-              active ? "bg-zinc-400" : "bg-zinc-800"
+            className={`text-[#d3d3d3] cursor-pointer py-3 px-2 h-min ${
+              active
+                ? "bg-[rgba(255,255,255,0.05)]"
+                : "bg-[rgba(255,255,255,0.1)]"
             }`}
           >
             {item.name}

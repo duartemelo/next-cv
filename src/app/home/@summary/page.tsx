@@ -7,20 +7,13 @@ import Image from "@/components/atom/Image";
 import profileImage from "@/assets/images/profile.jpg";
 import Card from "@/components/atom/Card";
 import Blur from "@/components/atom/Blur";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/atom/Button";
 import { disableScroll, enableScroll } from "@/utils/scroll";
-import { useDispatch } from "react-redux";
-import { change } from "@/store/scrollSlice";
-import useScrollDetection from "@/hooks/useScrollDetection";
 
 import { Transition } from "@headlessui/react";
 
 export default function Summary() {
-  const dispatch = useDispatch();
-  const ref = useRef<HTMLDivElement>(null);
-  const inViewport = useScrollDetection(ref);
-
   const [cardState, setCardState] = useState(false);
 
   useEffect(() => {
@@ -31,15 +24,9 @@ export default function Summary() {
     }
   }, [cardState]);
 
-  useEffect(() => {
-    if (inViewport) {
-      dispatch(change("summary"));
-    }
-  }, [inViewport, dispatch]);
-
   return (
     <>
-      <div ref={ref}>
+      <div>
         <Section className="gap-10 flex-col lg:flex-row">
           <div className="flex lg:flex-1 flex-col max-w-[800px]">
             <Text

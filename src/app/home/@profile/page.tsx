@@ -1,14 +1,5 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
-
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
-
-import { change } from "@/store/scrollSlice";
-
-import useScrollDetection from "@/hooks/useScrollDetection";
 
 import { Button } from "@/components/atom/Button";
 import Icon from "@/components/atom/Icon";
@@ -16,17 +7,8 @@ import Section from "@/components/atom/Section";
 import Text from "@/components/atom/Text";
 
 export default function Profile() {
-  const dispatch = useDispatch();
-  const ref = useRef<HTMLDivElement>(null);
-  const inViewport = useScrollDetection(ref);
-
-  useEffect(() => {
-    if (inViewport) {
-      dispatch(change("profile"));
-    }
-  }, [inViewport, dispatch]);
   return (
-    <div ref={ref}>
+    <div>
       <Section className="flex-col">
         <Text
           as="h1"

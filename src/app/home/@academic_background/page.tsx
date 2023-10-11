@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Transition } from "@headlessui/react";
 
-import { change } from "@/store/scrollSlice";
-
 import useScrollDetection from "@/hooks/useScrollDetection";
 
 import { disableScroll, enableScroll } from "@/utils/scroll";
@@ -19,9 +17,6 @@ import { Button } from "@/components/atom/Button";
 import { InsideSection } from "@/components/organism/InsideSection";
 
 export default function AcademicBackground() {
-  const dispatch = useDispatch();
-  const ref = useRef<HTMLDivElement>(null);
-  const inViewport = useScrollDetection(ref);
   const [cardState, setCardState] = useState(false);
 
   useEffect(() => {
@@ -32,15 +27,9 @@ export default function AcademicBackground() {
     }
   }, [cardState]);
 
-  useEffect(() => {
-    if (inViewport) {
-      dispatch(change("academic"));
-    }
-  }, [inViewport, dispatch]);
-
   return (
     <>
-      <div ref={ref}>
+      <div>
         <Section className="gap-10 flex-col">
           <Text
             as="a"

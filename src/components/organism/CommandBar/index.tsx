@@ -33,12 +33,12 @@ function RenderResults() {
       items={results}
       onRender={({ item, active }) =>
         typeof item === "string" ? (
-          <div className="text-[#aaa] text-sm pt-2 px-2 bg-[rgba(255,255,255,0.1)]">
+          <div className="text-[#aaa] text-sm pt-2 px-4 bg-[rgba(255,255,255,0.1)]">
             {item}
           </div>
         ) : (
           <div
-            className={`text-[#d3d3d3] cursor-pointer flex justify-between items-center py-3 px-2 h-min [&>.next-icon]:text-xl ${
+            className={`text-[#d3d3d3] cursor-pointer flex justify-between items-center py-3 px-4 h-min [&>.next-icon]:text-xl ${
               active
                 ? "bg-[rgba(255,255,255,0.05)]"
                 : "bg-[rgba(255,255,255,0.1)]"

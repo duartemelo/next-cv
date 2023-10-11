@@ -1,12 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
-
-import { change } from "@/store/scrollSlice";
-
-import useScrollDetection from "@/hooks/useScrollDetection";
 
 import { disableScroll, enableScroll } from "@/utils/scroll";
 
@@ -17,11 +12,10 @@ import Text from "@/components/atom/Text";
 import { Button } from "@/components/atom/Button";
 
 import { InsideSection } from "@/components/organism/InsideSection";
+import Icon from "@/components/atom/Icon";
+import { AiFillBook } from "react-icons/ai";
 
 export default function AcademicBackground() {
-  const dispatch = useDispatch();
-  const ref = useRef<HTMLDivElement>(null);
-  const inViewport = useScrollDetection(ref);
   const [cardState, setCardState] = useState(false);
 
   useEffect(() => {
@@ -32,22 +26,15 @@ export default function AcademicBackground() {
     }
   }, [cardState]);
 
-  useEffect(() => {
-    if (inViewport) {
-      dispatch(change("academic"));
-    }
-  }, [inViewport, dispatch]);
-
   return (
     <>
-      <div ref={ref}>
+      <div>
         <Section className="gap-10 flex-col">
           <Text
-            as="a"
-            onClick={() => setCardState(true)}
+            as="h1"
             size="4xl"
             weight="bold"
-            className="cursor-pointer text-white self-start"
+            className="text-white self-start"
           >
             Academic Background
           </Text>
@@ -93,6 +80,17 @@ export default function AcademicBackground() {
 
             <InsideSection.Interval start_at="set 2017" finish_at="jun 2020" />
           </InsideSection.Root>
+          <Button.Root
+            className="w-max text-slate-500 [&>.next-icon]:text-lg self-start"
+            onClick={() => setCardState(true)}
+          >
+            read more
+            <Button.RightIcon>
+              <Icon>
+                <AiFillBook />
+              </Icon>
+            </Button.RightIcon>
+          </Button.Root>
         </Section>
       </div>
 
@@ -106,25 +104,7 @@ export default function AcademicBackground() {
         leaveTo="opacity-0"
       >
         <Blur onClick={() => setCardState(false)}>
-          <Card>
-            <div className="w-full flex flex-col">
-              <div className="self-end w-min flex flex-row gap-2 group">
-                <Button.Root className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-green-400"></Button.Root>
-                <Button.Root className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-yellow-400"></Button.Root>
-                <Button.Root
-                  className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-red-400"
-                  onClick={() => setCardState(false)}
-                ></Button.Root>
-              </div>
-            </div>
-            <Text
-              as="h1"
-              size="3xl"
-              weight="medium"
-              className="mt-6 text-white"
-            >
-              Academic Background
-            </Text>
+          <Card title="Academic Background" onClose={() => setCardState(false)}>
             <Text
               as="p"
               size="base"

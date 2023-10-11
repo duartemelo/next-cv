@@ -7,20 +7,15 @@ import Image from "@/components/atom/Image";
 import profileImage from "@/assets/images/profile.jpg";
 import Card from "@/components/atom/Card";
 import Blur from "@/components/atom/Blur";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/atom/Button";
 import { disableScroll, enableScroll } from "@/utils/scroll";
-import { useDispatch } from "react-redux";
-import { change } from "@/store/scrollSlice";
-import useScrollDetection from "@/hooks/useScrollDetection";
 
 import { Transition } from "@headlessui/react";
+import Icon from "@/components/atom/Icon";
+import { AiFillProfile } from "react-icons/ai";
 
 export default function Summary() {
-  const dispatch = useDispatch();
-  const ref = useRef<HTMLDivElement>(null);
-  const inViewport = useScrollDetection(ref);
-
   const [cardState, setCardState] = useState(false);
 
   useEffect(() => {
@@ -31,24 +26,12 @@ export default function Summary() {
     }
   }, [cardState]);
 
-  useEffect(() => {
-    if (inViewport) {
-      dispatch(change("summary"));
-    }
-  }, [inViewport, dispatch]);
-
   return (
     <>
-      <div ref={ref}>
+      <div>
         <Section className="gap-10 flex-col lg:flex-row">
           <div className="flex lg:flex-1 flex-col max-w-[800px]">
-            <Text
-              as="a"
-              onClick={() => setCardState(true)}
-              size="4xl"
-              weight="bold"
-              className="cursor-pointer text-white"
-            >
+            <Text as="h1" size="4xl" weight="bold" className="text-white">
               Summary
             </Text>
             <Text
@@ -69,6 +52,17 @@ export default function Summary() {
               gaining valuable hands-on experience through a curricular
               internship at Useflow Europa.
             </Text>
+            <Button.Root
+              className="w-max text-slate-500 [&>.next-icon]:text-lg mt-2"
+              onClick={() => setCardState(true)}
+            >
+              read more
+              <Button.RightIcon>
+                <Icon>
+                  <AiFillProfile />
+                </Icon>
+              </Button.RightIcon>
+            </Button.Root>
           </div>
           <div className="flex lg:flex-1 max-w-[800px] items-center self-center justify-center">
             <Image
@@ -90,25 +84,7 @@ export default function Summary() {
         leaveTo="opacity-0"
       >
         <Blur onClick={() => setCardState(false)}>
-          <Card>
-            <div className="w-full flex flex-col">
-              <div className="self-end w-min flex flex-row gap-2 group">
-                <Button.Root className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-green-400"></Button.Root>
-                <Button.Root className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-yellow-400"></Button.Root>
-                <Button.Root
-                  className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-red-400"
-                  onClick={() => setCardState(false)}
-                ></Button.Root>
-              </div>
-            </div>
-            <Text
-              as="h1"
-              size="3xl"
-              weight="medium"
-              className="text-white mt-6"
-            >
-              Summary
-            </Text>
+          <Card title="Summary" onClose={() => setCardState(false)}>
             <Text
               as="p"
               size="base"

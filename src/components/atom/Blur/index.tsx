@@ -8,10 +8,9 @@ interface BlurProps {
 }
 
 export default function Blur({ children, className, onClick }: BlurProps) {
-
   const handleBlurClick: MouseEventHandler<HTMLDivElement> = (event) => {
     const target = event.target as HTMLDivElement;
-    if (target.className.includes("blur")) {
+    if (target.className.includes("next-blur")) {
       if (onClick) onClick();
     }
   };
@@ -19,7 +18,8 @@ export default function Blur({ children, className, onClick }: BlurProps) {
   return (
     <div
       className={twMerge(
-        "blur-background  backdrop-blur-sm",
+        "next-blur",
+        "bg-[rgba(0,0,0,0.8)]",
         "flex items-center justify-center",
         "fixed w-full h-full top-0 left-0 p-8",
         className

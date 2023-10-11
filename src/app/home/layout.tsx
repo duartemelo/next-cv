@@ -1,5 +1,7 @@
 "use client";
 
+import React, { useRef } from "react";
+import Icon from "@/components/atom/Icon";
 import {
   KBarAnimator,
   KBarPortal,
@@ -9,6 +11,17 @@ import {
   useMatches,
   KBarResults,
 } from "kbar";
+import {
+  AiFillBook,
+  AiFillCode,
+  AiFillCopy,
+  AiFillGithub,
+  AiFillHome,
+  AiFillLinkedin,
+  AiFillMail,
+  AiFillProfile,
+} from "react-icons/ai";
+import { MdOutlineWork } from "react-icons/md";
 
 export default function Layout(props: {
   children: React.ReactNode;
@@ -26,7 +39,11 @@ export default function Layout(props: {
       keywords: "copy-url",
       section: "General",
       perform: () => navigator.clipboard.writeText(window.location.href),
-      // icon: <Icon className="ri-file-copy-line" />,
+      icon: (
+        <Icon>
+          <AiFillCopy />
+        </Icon>
+      ),
     },
     {
       id: "email",
@@ -36,7 +53,25 @@ export default function Layout(props: {
       section: "General",
       perform: () =>
         window.open("mailto:duarteribeirodemelo@hotmail.com", "_blank"),
-      // icon: <Icon className="ri-mail-line" />,
+      icon: (
+        <Icon>
+          <AiFillMail />
+        </Icon>
+      ),
+    },
+    {
+      id: "copy-email",
+      name: "Copy Email",
+      shortcut: ["c", "e"],
+      keywords: "copy-email",
+      section: "General",
+      perform: () =>
+        navigator.clipboard.writeText("duarteribeirodemelo@hotmail.com"),
+      icon: (
+        <Icon>
+          <AiFillCopy />
+        </Icon>
+      ),
     },
     {
       id: "home",
@@ -44,8 +79,13 @@ export default function Layout(props: {
       shortcut: ["g", "h"],
       keywords: "go-home",
       section: "Go to",
-      // perform: () => router.push('/'),
-      // icon: <Icon className="ri-home-5-line" />,
+      perform: () =>
+        homeRef.current !== null && homeRef.current.scrollIntoView(),
+      icon: (
+        <Icon>
+          <AiFillHome />
+        </Icon>
+      ),
     },
     {
       id: "summary",
@@ -53,8 +93,13 @@ export default function Layout(props: {
       shortcut: ["g", "s"],
       keywords: "go-summary",
       section: "Go to",
-      // perform: () => router.push('/sobre'),
-      // icon: <Icon className="ri-user-line" />,
+      perform: () =>
+        summaryRef.current !== null && summaryRef.current.scrollIntoView(),
+      icon: (
+        <Icon>
+          <AiFillProfile />
+        </Icon>
+      ),
     },
     {
       id: "work-experience",
@@ -62,8 +107,13 @@ export default function Layout(props: {
       shortcut: ["g", "w"],
       keywords: "go-work-experience",
       section: "Go to",
-      // perform: () => router.push('/projetos'),
-      // icon: <Icon className="ri-lightbulb-line" />,
+      perform: () =>
+        workRef.current !== null && workRef.current.scrollIntoView(),
+      icon: (
+        <Icon>
+          <MdOutlineWork />
+        </Icon>
+      ),
     },
     {
       id: "academic-background",
@@ -71,31 +121,64 @@ export default function Layout(props: {
       shortcut: ["g", "a"],
       keywords: "go-academic-background",
       section: "Go to",
-      // perform: () => router.push('/setup'),
-      // icon: <Icon className="ri-macbook-line" />,
+      perform: () =>
+        academicRef.current !== null && academicRef.current.scrollIntoView(),
+      icon: (
+        <Icon>
+          <AiFillBook />
+        </Icon>
+      ),
+    },
+    {
+      id: "projects",
+      name: "Projects",
+      shortcut: ["p"],
+      keywords: "go-projects",
+      section: "Go to",
+      perform: () =>
+        projectsRef.current !== null && projectsRef.current.scrollIntoView(),
+      icon: (
+        <Icon>
+          <AiFillCode />
+        </Icon>
+      ),
     },
     {
       id: "github",
-      name: "Github",
+      name: "GitHub",
       shortcut: ["f", "g"],
       keywords: "go-github",
       section: "Follow",
       perform: () => window.open("https://github.com/duartemelo", "_blank"),
-      // icon: <Icon className="ri-github-line" />,
+      icon: (
+        <Icon>
+          <AiFillGithub />
+        </Icon>
+      ),
     },
     {
       id: "linkedin",
-      name: "LinkedIn",
+      name: "Linkedin",
       shortcut: ["f", "l"],
       keywords: "go-linkedin",
       section: "Follow",
       perform: () =>
         window.open("https://www.linkedin.com/in/duarteribeiromelo/", "_blank"),
-      // icon: <Icon className="ri-linkedin-line" />,
+      icon: (
+        <Icon>
+          <AiFillLinkedin />
+        </Icon>
+      ),
     },
   ];
   // TODO: create component for Kbar
   // TODO: action shortcut
+
+  const summaryRef = useRef<null | HTMLDivElement>(null);
+  const homeRef = useRef<null | HTMLDivElement>(null);
+  const workRef = useRef<null | HTMLDivElement>(null);
+  const academicRef = useRef<null | HTMLDivElement>(null);
+  const projectsRef = useRef<null | HTMLDivElement>(null);
 
   return (
     <KBarProvider actions={actions}>
@@ -112,11 +195,12 @@ export default function Layout(props: {
       </KBarPortal>
       <div className="w-full min-h-screen flex flex-col justify-center bg-fixed bg-gradient-to-tr from-gray-700 via-gray-900 to-black">
         {props.children}
-        {props.profile}
-        {props.summary}
-        {props.work_experience}
-        {props.academic_background}
-        {props.projects}
+        <div ref={homeRef}>{props.profile}</div>
+        <div ref={summaryRef}>{props.summary}</div>
+        <div ref={workRef}>{props.work_experience}</div>
+        <div ref={academicRef}>{props.academic_background}</div>
+        <div ref={projectsRef}>{props.projects}</div>
+        
       </div>
     </KBarProvider>
   );
@@ -135,12 +219,13 @@ function RenderResults() {
           </div>
         ) : (
           <div
-            className={`text-[#d3d3d3] cursor-pointer py-3 px-2 h-min ${
+            className={`text-[#d3d3d3] cursor-pointer flex items-center gap-3 py-3 px-2 h-min [&>.next-icon]:text-xl ${
               active
                 ? "bg-[rgba(255,255,255,0.05)]"
                 : "bg-[rgba(255,255,255,0.1)]"
             }`}
           >
+            {item.icon}
             {item.name}
           </div>
         )

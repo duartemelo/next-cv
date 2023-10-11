@@ -54,7 +54,7 @@ export default function Profile() {
                 <AiFillLinkedin />
               </Icon>
             </Button.LeftIcon>
-            LinkedIn Profile
+            Linkedin Profile
           </Button.Root>
         </div>
       </Section>

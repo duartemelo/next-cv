@@ -125,7 +125,7 @@ export default function Layout(props: {
     {
       id: "projects",
       name: "Projects",
-      shortcut: ["p"],
+      shortcut: ["g", "p"],
       keywords: "go-projects",
       section: "Go to",
       perform: () =>

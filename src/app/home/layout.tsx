@@ -171,8 +171,8 @@ export default function Layout(props: {
       ),
     },
   ];
+
   // TODO: create component for Kbar
-  // TODO: action shortcut
 
   const summaryRef = useRef<null | HTMLDivElement>(null);
   const homeRef = useRef<null | HTMLDivElement>(null);
@@ -200,7 +200,6 @@ export default function Layout(props: {
         <div ref={workRef}>{props.work_experience}</div>
         <div ref={academicRef}>{props.academic_background}</div>
         <div ref={projectsRef}>{props.projects}</div>
-        
       </div>
     </KBarProvider>
   );
@@ -214,19 +213,36 @@ function RenderResults() {
       items={results}
       onRender={({ item, active }) =>
         typeof item === "string" ? (
+          // TODO: Kbar section
           <div className="text-[#aaa] text-sm pt-2 px-2 bg-[rgba(255,255,255,0.1)]">
             {item}
           </div>
         ) : (
+          // TODO: Kbar button
           <div
-            className={`text-[#d3d3d3] cursor-pointer flex items-center gap-3 py-3 px-2 h-min [&>.next-icon]:text-xl ${
+            className={`text-[#d3d3d3] cursor-pointer flex justify-between items-center py-3 px-2 h-min [&>.next-icon]:text-xl ${
               active
                 ? "bg-[rgba(255,255,255,0.05)]"
                 : "bg-[rgba(255,255,255,0.1)]"
             }`}
           >
-            {item.icon}
-            {item.name}
+            <div className="flex items-center gap-3">
+              {item.icon}
+              {item.name}
+            </div>
+
+            <div className="flex items-center gap-2">
+              {item.shortcut &&
+                item.shortcut.length > 0 &&
+                item.shortcut.map((item, key) => (
+                  <span
+                    key={key}
+                    className="w-[20px] h-[20px] rounded bg-[var(--primary)] flex justify-center items-center"
+                  >
+                    {item}
+                  </span>
+                ))}
+            </div>
           </div>
         )
       }

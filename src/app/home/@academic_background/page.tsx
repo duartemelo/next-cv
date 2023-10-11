@@ -1,10 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
 import { Transition } from "@headlessui/react";
-
-import useScrollDetection from "@/hooks/useScrollDetection";
 
 import { disableScroll, enableScroll } from "@/utils/scroll";
 
@@ -15,6 +12,8 @@ import Text from "@/components/atom/Text";
 import { Button } from "@/components/atom/Button";
 
 import { InsideSection } from "@/components/organism/InsideSection";
+import Icon from "@/components/atom/Icon";
+import { AiFillBook } from "react-icons/ai";
 
 export default function AcademicBackground() {
   const [cardState, setCardState] = useState(false);
@@ -32,11 +31,10 @@ export default function AcademicBackground() {
       <div>
         <Section className="gap-10 flex-col">
           <Text
-            as="a"
-            onClick={() => setCardState(true)}
+            as="h1"
             size="4xl"
             weight="bold"
-            className="cursor-pointer text-white self-start"
+            className="text-white self-start"
           >
             Academic Background
           </Text>
@@ -82,6 +80,17 @@ export default function AcademicBackground() {
 
             <InsideSection.Interval start_at="set 2017" finish_at="jun 2020" />
           </InsideSection.Root>
+          <Button.Root
+            className="w-max text-slate-500 [&>.next-icon]:text-lg self-start"
+            onClick={() => setCardState(true)}
+          >
+            read more
+            <Button.RightIcon>
+              <Icon>
+                <AiFillBook />
+              </Icon>
+            </Button.RightIcon>
+          </Button.Root>
         </Section>
       </div>
 

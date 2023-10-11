@@ -12,6 +12,8 @@ import { Button } from "@/components/atom/Button";
 import { disableScroll, enableScroll } from "@/utils/scroll";
 
 import { Transition } from "@headlessui/react";
+import Icon from "@/components/atom/Icon";
+import { AiFillProfile } from "react-icons/ai";
 
 export default function Summary() {
   const [cardState, setCardState] = useState(false);
@@ -29,13 +31,7 @@ export default function Summary() {
       <div>
         <Section className="gap-10 flex-col lg:flex-row">
           <div className="flex lg:flex-1 flex-col max-w-[800px]">
-            <Text
-              as="a"
-              onClick={() => setCardState(true)}
-              size="4xl"
-              weight="bold"
-              className="cursor-pointer text-white"
-            >
+            <Text as="h1" size="4xl" weight="bold" className="text-white">
               Summary
             </Text>
             <Text
@@ -56,6 +52,17 @@ export default function Summary() {
               gaining valuable hands-on experience through a curricular
               internship at Useflow Europa.
             </Text>
+            <Button.Root
+              className="w-max text-slate-500 [&>.next-icon]:text-lg mt-2"
+              onClick={() => setCardState(true)}
+            >
+              read more
+              <Button.RightIcon>
+                <Icon>
+                  <AiFillProfile />
+                </Icon>
+              </Button.RightIcon>
+            </Button.Root>
           </div>
           <div className="flex lg:flex-1 max-w-[800px] items-center self-center justify-center">
             <Image

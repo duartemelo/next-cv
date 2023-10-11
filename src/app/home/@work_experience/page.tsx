@@ -12,6 +12,8 @@ import Section from "@/components/atom/Section";
 import Text from "@/components/atom/Text";
 
 import { InsideSection } from "@/components/organism/InsideSection";
+import Icon from "@/components/atom/Icon";
+import { MdOutlineWork } from "react-icons/md";
 
 export default function WorkExperience() {
   const [cardState, setCardState] = useState(false);
@@ -29,11 +31,10 @@ export default function WorkExperience() {
       <div>
         <Section className="gap-10 flex-col">
           <Text
-            as="a"
-            onClick={() => setCardState(true)}
+            as="h1"
             size="4xl"
             weight="bold"
-            className="cursor-pointer text-white self-start"
+            className="text-white self-start"
           >
             Work Experience
           </Text>
@@ -89,6 +90,17 @@ export default function WorkExperience() {
 
             <InsideSection.Interval start_at="jun 2019" finish_at="jul 2019" />
           </InsideSection.Root>
+          <Button.Root
+            className="w-max text-slate-500 [&>.next-icon]:text-lg self-start"
+            onClick={() => setCardState(true)}
+          >
+            read more
+            <Button.RightIcon>
+              <Icon>
+                <MdOutlineWork />
+              </Icon>
+            </Button.RightIcon>
+          </Button.Root>
         </Section>
       </div>
 

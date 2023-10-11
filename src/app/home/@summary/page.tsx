@@ -84,25 +84,7 @@ export default function Summary() {
         leaveTo="opacity-0"
       >
         <Blur onClick={() => setCardState(false)}>
-          <Card>
-            <div className="w-full flex flex-col">
-              <div className="self-end w-min flex flex-row gap-2 group">
-                <Button.Root className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-green-400"></Button.Root>
-                <Button.Root className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-yellow-400"></Button.Root>
-                <Button.Root
-                  className="w-3 h-3 rounded-full bg-zinc-300 group-hover:bg-red-400"
-                  onClick={() => setCardState(false)}
-                ></Button.Root>
-              </div>
-            </div>
-            <Text
-              as="h1"
-              size="3xl"
-              weight="medium"
-              className="text-white mt-6"
-            >
-              Summary
-            </Text>
+          <Card title="Summary" onClose={() => setCardState(false)}>
             <Text
               as="p"
               size="base"

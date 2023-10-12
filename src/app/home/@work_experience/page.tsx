@@ -48,10 +48,10 @@ export default function WorkExperience() {
                 Working with ReactJS (TS and JS) to implement features on
                 Useflow projects and develop MVPs.
               </InsideSection.Description>
-              <InsideSection.Tools>
+              <InsideSection.Footer>
                 react | javascript | typescript | react router | hooks | redux |
                 styled components
-              </InsideSection.Tools>
+              </InsideSection.Footer>
             </div>
 
             <InsideSection.Interval start_at="jun 2023" />
@@ -67,10 +67,10 @@ export default function WorkExperience() {
                 Useflow projects and learnt Flutter to implement an MVP mobile
                 app.
               </InsideSection.Description>
-              <InsideSection.Tools>
+              <InsideSection.Footer>
                 react | javascript | typescript | react router | hooks | redux |
                 styled components | flutter
-              </InsideSection.Tools>
+              </InsideSection.Footer>
             </div>
 
             <InsideSection.Interval start_at="feb 2023" finish_at="jun 2023" />
@@ -85,7 +85,7 @@ export default function WorkExperience() {
                 Coded a semi-humanized robot called Pepper with Python. Erasmus
                 internship.
               </InsideSection.Description>
-              <InsideSection.Tools>python</InsideSection.Tools>
+              <InsideSection.Footer>python</InsideSection.Footer>
             </div>
 
             <InsideSection.Interval start_at="jun 2019" finish_at="jul 2019" />

@@ -53,10 +53,10 @@ export default function AcademicBackground() {
                 <br />
                 Computer Vision in C and Language Processing in Python.
               </InsideSection.Description>
-              <InsideSection.Tools>
+              <InsideSection.Footer>
                 oop | c# | .net core | mysql | postgresql | sql server | angular
                 | html | css | js | python | c | git | github | scrum
-              </InsideSection.Tools>
+              </InsideSection.Footer>
             </div>
 
             <InsideSection.Interval start_at="set 2020" finish_at="jun 2023" />
@@ -73,9 +73,9 @@ export default function AcademicBackground() {
                 Final Project - FeedyVet - made using React and Firebase and
                 received a grade of 20/20.
               </InsideSection.Description>
-              <InsideSection.Tools>
+              <InsideSection.Footer>
                 python | c# | mysql | html | css | js | git | github
-              </InsideSection.Tools>
+              </InsideSection.Footer>
             </div>
 
             <InsideSection.Interval start_at="set 2017" finish_at="jun 2020" />

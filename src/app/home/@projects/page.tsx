@@ -4,7 +4,6 @@ import Text from "@/components/atom/Text";
 import { InsideSection } from "@/components/organism/InsideSection";
 
 export default function Projects() {
-
   return (
     <>
       <div>
@@ -28,10 +27,10 @@ export default function Projects() {
                 <br />
                 Has authentication using Firebase.
               </InsideSection.Description>
-              <InsideSection.Tools>
+              <InsideSection.Footer>
                 react | react router | custom hooks | redux | css modules |
                 firebase
-              </InsideSection.Tools>
+              </InsideSection.Footer>
             </div>
 
             <InsideSection.Interval start_at="mar 2023" />
@@ -47,9 +46,9 @@ export default function Projects() {
                 <br />
                 Uses IPMA API.
               </InsideSection.Description>
-              <InsideSection.Tools>
+              <InsideSection.Footer>
                 python | discord.py | requests.py | postgresql
-              </InsideSection.Tools>
+              </InsideSection.Footer>
             </div>
 
             <InsideSection.Interval start_at="jan 2022" finish_at="nov 2022" />
@@ -61,12 +60,12 @@ export default function Projects() {
                 Web app where a barber can manage it&apos;s own business and
                 clients can book their appointments.
               </InsideSection.Description>
-              <InsideSection.Tools>
+              <InsideSection.Footer>
                 angular | python | flask | mongodb | nginx | apache
-              </InsideSection.Tools>
+              </InsideSection.Footer>
             </div>
 
-            <InsideSection.Interval start_at="jul 2022" finish_at="set 2022" />
+            <InsideSection.Interval start_at="jul 2022" finish_at="sep 2022" />
           </InsideSection.Root>
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
@@ -75,12 +74,15 @@ export default function Projects() {
                 A school club that ensures knowledge in Microsoft Tools to the
                 students.
                 <br />
-                We prepared more than 100 students for the Excel Microsoft
-                Office Specialist Exam.
+                We prepared more than 100 students for the Excel and Word
+                Microsoft Office Specialist Exams.
               </InsideSection.Description>
+              <InsideSection.Footer>
+                microsoft excel | microsoft word
+              </InsideSection.Footer>
             </div>
 
-            <InsideSection.Interval start_at="set 2019" finish_at="jul 2020" />
+            <InsideSection.Interval start_at="sep 2019" finish_at="jul 2020" />
           </InsideSection.Root>
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
@@ -91,12 +93,12 @@ export default function Projects() {
                 Manage your domestic animals in a simple and easy way with a web
                 app that connects veterinary clinics and their clients.
               </InsideSection.Description>
-              <InsideSection.Tools>
+              <InsideSection.Footer>
                 react | redux | firebase
-              </InsideSection.Tools>
+              </InsideSection.Footer>
             </div>
 
-            <InsideSection.Interval start_at="set 2019" finish_at="jul 2020" />
+            <InsideSection.Interval start_at="sep 2019" finish_at="jul 2020" />
           </InsideSection.Root>
         </Section>
       </div>

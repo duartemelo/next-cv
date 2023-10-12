@@ -12,6 +12,7 @@ import {
   AiFillLinkedin,
   AiFillMail,
   AiFillProfile,
+  AiFillTrophy,
 } from "react-icons/ai";
 import { MdOutlineWork } from "react-icons/md";
 import CommandBar from "@/components/organism/CommandBar";
@@ -23,6 +24,7 @@ export default function Layout(props: {
   work_experience: React.ReactNode;
   academic_background: React.ReactNode;
   projects: React.ReactNode;
+  awards: React.ReactNode;
 }) {
   const actions = [
     {
@@ -111,7 +113,7 @@ export default function Layout(props: {
     {
       id: "academic-background",
       name: "Academic Background",
-      shortcut: ["g", "a"],
+      shortcut: ["g", "e"],
       keywords: "go-academic-background",
       section: "Go to",
       perform: () =>
@@ -133,6 +135,20 @@ export default function Layout(props: {
       icon: (
         <Icon>
           <AiFillCode />
+        </Icon>
+      ),
+    },
+    {
+      id: "awards",
+      name: "Awards",
+      shortcut: ["g", "a"],
+      keywords: "go-awards",
+      section: "Go to",
+      perform: () =>
+        awardsRef.current !== null && awardsRef.current.scrollIntoView(),
+      icon: (
+        <Icon>
+          <AiFillTrophy />
         </Icon>
       ),
     },
@@ -170,6 +186,7 @@ export default function Layout(props: {
   const workRef = useRef<null | HTMLDivElement>(null);
   const academicRef = useRef<null | HTMLDivElement>(null);
   const projectsRef = useRef<null | HTMLDivElement>(null);
+  const awardsRef = useRef<null | HTMLDivElement>(null);
 
   return (
     <KBarProvider actions={actions}>
@@ -181,6 +198,7 @@ export default function Layout(props: {
         <div ref={workRef}>{props.work_experience}</div>
         <div ref={academicRef}>{props.academic_background}</div>
         <div ref={projectsRef}>{props.projects}</div>
+        <div ref={awardsRef}>{props.awards}</div>
       </div>
     </KBarProvider>
   );

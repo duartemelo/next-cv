@@ -1,10 +1,10 @@
 # Duarte Melo NextJS CV
 
-<img src="https://placehold.co/800x200" align="center"/>
+<img src="https://i.imgur.com/HwuviAp.png" align="center"/>
 
 My personal portfolio/cv website made in NextJS and React.
 
-[Check it live here](https://projetocss-jesscoder.netlify.app/)
+[Check it live here](https://google.com/) (still not live)
 
 ## Technologies and Frameworks
 
@@ -13,16 +13,6 @@ My personal portfolio/cv website made in NextJS and React.
 - TypeScript
 - TailwindCSS
 - Tailwind Merge
-
-## Preview
-
-### :desktop_computer: Desktop
-
-<img src="https://placehold.co/400x200"/>
-
-### :iphone: Mobile
-
-<img src="https://placehold.co/200x400" />
 
 
 ## Run the project
@@ -40,7 +30,6 @@ npm install
 
 npm run dev
 ```
-
 
 ## MIT License
 
@@ -63,4 +52,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-

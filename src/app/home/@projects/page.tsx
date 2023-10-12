@@ -13,7 +13,7 @@ export default function Projects() {
             as="h1"
             size="4xl"
             weight="bold"
-            className="text-white self-start"
+            className="text-[var(--white)] self-start"
           >
             Projects
           </Text>

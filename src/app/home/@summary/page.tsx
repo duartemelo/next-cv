@@ -31,16 +31,16 @@ export default function Summary() {
       <div>
         <Section className="gap-10 flex-col lg:flex-row">
           <div className="flex lg:flex-1 flex-col max-w-[800px]">
-            <Text as="h1" size="4xl" weight="bold" className="text-white">
+            <Text as="h1" size="4xl" weight="bold" className="text-[var(--white)]">
               Summary
             </Text>
             <Text
               as="p"
               size="lg"
               weight="regular"
-              className="mt-4 text-justify text-white"
+              className="mt-4 text-justify text-[var(--white)]"
             >
-              Junior Front-End Engineer specializing in React (with JavaScript
+              Junior Front-End Engineer from Braga - Portugal, specializing in React (with JavaScript
               and TypeScript) at Useflow Europa. Passionate about
               problem-solving and dedicated to delivering high-quality
               solutions. With a strong foundation in IT engineering, I have
@@ -53,7 +53,7 @@ export default function Summary() {
               internship at Useflow Europa.
             </Text>
             <Button.Root
-              className="w-max text-slate-500 [&>.next-icon]:text-lg mt-2"
+              className="w-max text-[var(--dark-100)] [&>.next-icon]:text-lg mt-2"
               onClick={() => setCardState(true)}
             >
               read more
@@ -89,7 +89,7 @@ export default function Summary() {
               as="p"
               size="base"
               weight="light"
-              className="mt-2 text-justify text-white"
+              className="mt-2 text-justify text-[var(--white)]"
             >
               Throughout my entire life, I have always maintained a strong
               connection with the IT world. Even as a young child, before I even

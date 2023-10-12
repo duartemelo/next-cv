@@ -34,7 +34,7 @@ export default function AcademicBackground() {
             as="h1"
             size="4xl"
             weight="bold"
-            className="text-white self-start"
+            className="text-[var(--white)] self-start"
           >
             Academic Background
           </Text>
@@ -81,7 +81,7 @@ export default function AcademicBackground() {
             <InsideSection.Interval start_at="set 2017" finish_at="jun 2020" />
           </InsideSection.Root>
           <Button.Root
-            className="w-max text-slate-500 [&>.next-icon]:text-lg self-start"
+            className="w-max text-[var(--dark-100)] [&>.next-icon]:text-lg self-start"
             onClick={() => setCardState(true)}
           >
             read more
@@ -109,7 +109,7 @@ export default function AcademicBackground() {
               as="p"
               size="base"
               weight="light"
-              className="mt-2 text-justify text-white"
+              className="mt-2 text-justify text-[var(--white)]"
             >
               Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
               eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur

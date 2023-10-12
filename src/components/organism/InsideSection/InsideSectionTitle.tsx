@@ -27,9 +27,7 @@ export default function InsideSectionTitle({
         >
           {children}
         </Text>
-        <Icon>
-          {icon}
-        </Icon>
+        <Icon className="text-lg">{icon}</Icon>
       </div>
     );
   }

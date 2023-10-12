@@ -108,29 +108,36 @@ export default function AcademicBackground() {
             <Text
               as="p"
               size="base"
-              weight="light"
+              weight="regular"
               className="mt-2 text-justify text-[var(--white)]"
             >
-              Sit velit commodo et culpa eiusmod ex minim cupidatat culpa
-              eiusmod fugiat elit cupidatat. In sint laborum Lorem consectetur
-              velit occaecat. Consectetur minim dolor ex excepteur ut nisi qui.
-              Cillum sit eu non ea pariatur in ipsum proident non labore culpa
-              pariatur. In aliquip fugiat eiusmod tempor. Veniam esse deserunt
-              minim consequat consequat. Minim proident aute id duis magna do
-              in. Occaecat sint in Lorem fugiat anim officia dolore anim sunt
-              pariatur et proident exercitation. Excepteur laborum do velit
-              veniam magna velit velit irure laborum cupidatat. Dolor
-              exercitation et minim consectetur do anim labore culpa nisi nisi
-              esse. Amet irure culpa amet occaecat fugiat officia et sit minim
-              sit ea exercitation nulla cupidatat. Sit veniam eu cupidatat esse
-              irure. Exercitation aliquip ullamco culpa aliquip quis enim anim
-              proident excepteur velit. Cupidatat anim laboris adipisicing
-              veniam eiusmod nisi mollit duis labore cillum cupidatat labore ad.
-              In cillum sunt anim in id. Culpa tempor do nisi enim veniam velit
-              ipsum sit fugiat nisi exercitation excepteur irure. Deserunt sint
-              culpa ex laboris incididunt nisi voluptate reprehenderit aute sit
-              non irure. Nisi amet amet officia ipsum est. Consectetur elit
-              proident officia Lorem labore eu tempor id sint magna anim anim.
+              I embarked on my journey in the field of IT in 2017 when I
+              enrolled in an IT professional course. During this program, I
+              acquired the fundamental knowledge of programming, sparking my
+              interest in frontend and web development. Upon completing the
+              course in 2020, I decided to set myself apart from my peers by
+              developing my final project using React, which earned me the
+              highest possible grade of 20/20. Since then, I have continuously
+              delved into frontend technologies. <br />
+              Following that, I pursued my bachelor&apos;s degree in IT
+              Engineering at IPCA, which further honed my IT engineering skills
+              and shaped me into the engineer I am today. I learned about
+              various topics, including Data Structures, Object-Oriented
+              Programming (OOP) principles, Databases, Computer Vision, Web
+              Development, Artificial Intelligence, Agile Methodologies, and
+              more.
+              <br />
+              <br />
+              Relevant subjects and topics:
+              <br />- OOP (C#)
+              <br />- Software analysis and modeling (SCRUM) <br />- Software
+              Engineering (SCRUM, Agile) <br />- Data storage and access
+              (PostgresSQL) <br />- Computer Vision (C) <br />- Language
+              Processing (Python with PLY) <br />- Data communication (Python
+              with Flask to create a Web API, and Angular) <br />- Software
+              development project (C# with Entity Framework, SQL Server, and
+              Angular) <br />- Web development (Angular 13 and pure JS) <br />
+              Git and GitHub have been used throughout all the course.
             </Text>
           </Card>
         </Blur>

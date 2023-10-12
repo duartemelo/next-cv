@@ -47,6 +47,9 @@ export default function WorkExperience() {
               <InsideSection.Description>
                 Working with ReactJS (TS and JS) to implement features on
                 Useflow projects and develop MVPs.
+                <br />
+                Currently responsible for &quot;New Useflow&quot; frontend in
+                React (TypeScript).
               </InsideSection.Description>
               <InsideSection.Footer>
                 react | javascript | typescript | react router | hooks | redux |
@@ -118,7 +121,7 @@ export default function WorkExperience() {
             <Text
               as="p"
               size="base"
-              weight="light"
+              weight="regular"
               className="mt-2 text-justify text-[var(--white)]"
             >
               My journey as a developer began in 2019 when I undertook an

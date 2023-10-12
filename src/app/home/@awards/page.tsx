@@ -20,12 +20,12 @@ export default function Awards() {
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
               <InsideSection.Title>
-                Member of the Jury for the Final Project Evaluation (2022/2023)
+                Jury Member for the Final Project Evaluation (2022/2023)
               </InsideSection.Title>
               <InsideSection.Description>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas doloremque enim sequi consectetur perspiciatis,
-                voluptatum porro nobis laboriosam magnam distinctio!
+                Assessed several final projects presented by students of the
+                Management and Programming of Computer Systems course at Escola
+                Profissional de Braga
               </InsideSection.Description>
               <InsideSection.Footer>
                 Escola Profissional de Braga
@@ -40,8 +40,7 @@ export default function Awards() {
                 Second Highest Average Grade on University Admission
               </InsideSection.Title>
               <InsideSection.Description>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Corporis, natus!
+                Finished High School with a average grade of 19.35
               </InsideSection.Description>
               <InsideSection.Footer>
                 Instituto Politécnico do Cávado e do Ave
@@ -56,8 +55,8 @@ export default function Awards() {
                 Honorable Mention 2018/2019
               </InsideSection.Title>
               <InsideSection.Description>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-                eos!
+                Finished that school year with the second highest average grade
+                in the class.
               </InsideSection.Description>
               <InsideSection.Footer>
                 Escola Profissional de Braga
@@ -70,8 +69,8 @@ export default function Awards() {
             <div className="flex flex-col md:flex-1">
               <InsideSection.Title>Merit Award 2017/2018</InsideSection.Title>
               <InsideSection.Description>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-                magnam.
+                Finished that school year with the first highest average grade
+                in the class.
               </InsideSection.Description>
               <InsideSection.Footer>
                 Escola Profissional de Braga

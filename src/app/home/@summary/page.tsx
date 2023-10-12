@@ -95,7 +95,7 @@ export default function Summary() {
             <Text
               as="p"
               size="base"
-              weight="light"
+              weight="regular"
               className="mt-2 text-justify text-[var(--white)]"
             >
               Throughout my entire life, I have always maintained a strong

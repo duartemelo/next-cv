@@ -22,7 +22,7 @@ export default function InsideSectionTitle({
           as={href ? "a" : "h3"}
           weight="medium"
           size="xl"
-          className={twMerge("mt-4 text-white", className)}
+          className={twMerge(className)}
           href={href}
         >
           {children}

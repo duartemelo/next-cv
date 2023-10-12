@@ -1,4 +1,3 @@
-import Icon from "@/components/atom/Icon";
 import Section from "@/components/atom/Section";
 import Text from "@/components/atom/Text";
 
@@ -23,7 +22,6 @@ export default function Projects() {
             <div className="flex flex-col md:flex-1">
               <InsideSection.Title
                 href="https://github.com/duartemelo/react-movies-app"
-                className="mt-0"
                 icon={<AiFillGithub />}
               >
                 React Movies App
@@ -46,7 +44,6 @@ export default function Projects() {
             <div className="flex flex-col md:flex-1">
               <InsideSection.Title
                 href="https://github.com/duartemelo/IPMADiscordBot"
-                className="mt-0"
                 icon={<AiFillGithub />}
               >
                 IPMA Discord Bot
@@ -99,7 +96,6 @@ export default function Projects() {
             <div className="flex flex-col md:flex-1">
               <InsideSection.Title
                 href="https://github.com/duartemelo/FeedyVet"
-                className="mt-0"
                 icon={<AiFillGithub />}
               >
                 FeedyVet

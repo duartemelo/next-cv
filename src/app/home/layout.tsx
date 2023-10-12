@@ -25,6 +25,7 @@ export default function Layout(props: {
   academic_background: React.ReactNode;
   projects: React.ReactNode;
   awards: React.ReactNode;
+  courses: React.ReactNode;
 }) {
   const actions = [
     {
@@ -153,6 +154,20 @@ export default function Layout(props: {
       ),
     },
     {
+      id: "courses",
+      name: "Courses",
+      shortcut: ["g", "c"],
+      keywords: "go-courses",
+      section: "Go to",
+      perform: () =>
+        coursesRef.current !== null && coursesRef.current.scrollIntoView(),
+      icon: (
+        <Icon>
+          <AiFillCode />
+        </Icon>
+      ),
+    },
+    {
       id: "github",
       name: "GitHub",
       shortcut: ["f", "g"],
@@ -187,6 +202,7 @@ export default function Layout(props: {
   const academicRef = useRef<null | HTMLDivElement>(null);
   const projectsRef = useRef<null | HTMLDivElement>(null);
   const awardsRef = useRef<null | HTMLDivElement>(null);
+  const coursesRef = useRef<null | HTMLDivElement>(null);
 
   return (
     <KBarProvider actions={actions}>
@@ -199,6 +215,7 @@ export default function Layout(props: {
         <div ref={academicRef}>{props.academic_background}</div>
         <div ref={projectsRef}>{props.projects}</div>
         <div ref={awardsRef}>{props.awards}</div>
+        <div ref={coursesRef}>{props.courses}</div>
       </div>
     </KBarProvider>
   );

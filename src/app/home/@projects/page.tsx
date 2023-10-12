@@ -1,7 +1,9 @@
+import Icon from "@/components/atom/Icon";
 import Section from "@/components/atom/Section";
 import Text from "@/components/atom/Text";
 
 import { InsideSection } from "@/components/organism/InsideSection";
+import { AiFillGithub } from "react-icons/ai";
 
 export default function Projects() {
   return (
@@ -19,9 +21,14 @@ export default function Projects() {
 
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
-              <InsideSection.Title href="https://github.com/duartemelo/react-movies-app">
+              <InsideSection.Title
+                href="https://github.com/duartemelo/react-movies-app"
+                className="mt-0"
+                icon={<AiFillGithub />}
+              >
                 React Movies App
               </InsideSection.Title>
+
               <InsideSection.Description>
                 A web app that lists movies from the Movie Database API.
                 <br />
@@ -37,7 +44,11 @@ export default function Projects() {
           </InsideSection.Root>
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
-              <InsideSection.Title href="https://github.com/duartemelo/IPMADiscordBot">
+              <InsideSection.Title
+                href="https://github.com/duartemelo/IPMADiscordBot"
+                className="mt-0"
+                icon={<AiFillGithub />}
+              >
                 IPMA Discord Bot
               </InsideSection.Title>
               <InsideSection.Description>
@@ -86,7 +97,11 @@ export default function Projects() {
           </InsideSection.Root>
           <InsideSection.Root>
             <div className="flex flex-col md:flex-1">
-              <InsideSection.Title href="https://github.com/duartemelo/FeedyVet">
+              <InsideSection.Title
+                href="https://github.com/duartemelo/FeedyVet"
+                className="mt-0"
+                icon={<AiFillGithub />}
+              >
                 FeedyVet
               </InsideSection.Title>
               <InsideSection.Description>

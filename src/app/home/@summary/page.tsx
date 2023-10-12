@@ -31,7 +31,12 @@ export default function Summary() {
       <div>
         <Section className="gap-10 flex-col lg:flex-row">
           <div className="flex lg:flex-1 flex-col max-w-[800px]">
-            <Text as="h1" size="4xl" weight="bold" className="text-[var(--white)]">
+            <Text
+              as="h1"
+              size="4xl"
+              weight="bold"
+              className="text-[var(--white)]"
+            >
               Summary
             </Text>
             <Text
@@ -40,17 +45,19 @@ export default function Summary() {
               weight="regular"
               className="mt-4 text-justify text-[var(--white)]"
             >
-              Junior Front-End Engineer from Braga - Portugal, specializing in React (with JavaScript
-              and TypeScript) at Useflow Europa. Passionate about
-              problem-solving and dedicated to delivering high-quality
-              solutions. With a strong foundation in IT engineering, I have
-              demonstrated exceptional analytical thinking and the ability to
-              adapt swiftly to new challenges. Recognized as an award-winning
-              academic achiever, I am committed to continuously updating my
-              skills to stay at the forefront of industry trends. I have
-              recently completed my IT Engineering Bachelor&apos;s degree while
-              gaining valuable hands-on experience through a curricular
+              Junior Front-End Engineer from Braga - Portugal, specializing in
+              React (with JavaScript and TypeScript) at Useflow Europa.
+              Passionate about problem-solving and dedicated to delivering
+              high-quality solutions. With a strong foundation in IT
+              engineering, I have demonstrated exceptional analytical thinking
+              and the ability to adapt swiftly to new challenges. Recognized as
+              an award-winning academic achiever, I am committed to continuously
+              updating my skills to stay at the forefront of industry trends. I
+              have recently completed my IT Engineering Bachelor&apos;s degree
+              while gaining valuable hands-on experience through a curricular
               internship at Useflow Europa.
+              <br />I am a native Portuguese speaker, speak a little bit of
+              Spanish, and can maintain a technical conversation in English.
             </Text>
             <Button.Root
               className="w-max text-[var(--dark-100)] [&>.next-icon]:text-lg mt-2"

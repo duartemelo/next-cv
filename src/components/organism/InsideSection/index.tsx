@@ -1,13 +1,15 @@
 import InsideSectionDescription from "./InsideSectionDescription";
 import InsideSectionInterval from "./InsideSectionInterval";
 import InsideSectionTitle from "./InsideSectionTitle";
-import InsideSectionTools from "./InsideSectionTools";
+import InsideSectionFooter from "./InsideSectionFooter";
 import InsideSectionRoot from "./InsideSectionRoot";
+import InsideSectionDate from "./InsideSectionDate";
 
 export const InsideSection = {
   Root: InsideSectionRoot,
   Title: InsideSectionTitle,
   Description: InsideSectionDescription,
-  Tools: InsideSectionTools,
+  Footer: InsideSectionFooter,
   Interval: InsideSectionInterval,
+  Date: InsideSectionDate,
 };

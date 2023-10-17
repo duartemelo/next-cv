@@ -15,7 +15,7 @@ export default function Profile() {
           size="5xl"
           weight="bold"
           align="center"
-          className="text-white"
+          className="text-[var(--white)]"
         >
           Duarte Melo
         </Text>
@@ -23,7 +23,7 @@ export default function Profile() {
           as="p"
           size="2xl"
           weight="light"
-          className="mt-6 text-white"
+          className="mt-6 text-[var(--white)]"
           align="center"
           italic={true}
         >
@@ -32,7 +32,7 @@ export default function Profile() {
         </Text>
         <div className="flex gap-4 mt-6 flex-col sm:flex-row">
           <Button.Root
-            className="bg-white px-5 py-1 rounded text-zinc-900 hover:text-white hover:bg-purple-950 transition ease-in-out"
+            className="bg-white px-5 py-1 rounded text-[var(--dark-400)] hover:text-[var(--white)] hover:bg-purple-950 transition ease-in-out"
             to="https://github.com/duartemelo/"
             target="blank"
           >
@@ -45,7 +45,7 @@ export default function Profile() {
           </Button.Root>
 
           <Button.Root
-            className="bg-white px-5 py-1 rounded text-zinc-900 hover:text-white hover:bg-blue-600 transition ease-in-out"
+            className="bg-[var(--white)] px-5 py-1 rounded text-[var(--dark-400)] hover:text-[var(--white)] hover:bg-blue-600 transition ease-in-out"
             to="https://www.linkedin.com/in/duarteribeiromelo/"
             target="blank"
           >

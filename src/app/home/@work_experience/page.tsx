@@ -34,7 +34,7 @@ export default function WorkExperience() {
             as="h1"
             size="4xl"
             weight="bold"
-            className="text-white self-start"
+            className="text-[var(--white)] self-start"
           >
             Work Experience
           </Text>
@@ -47,11 +47,14 @@ export default function WorkExperience() {
               <InsideSection.Description>
                 Working with ReactJS (TS and JS) to implement features on
                 Useflow projects and develop MVPs.
+                <br />
+                Currently responsible for &quot;New Useflow&quot; frontend in
+                React (TypeScript).
               </InsideSection.Description>
-              <InsideSection.Tools>
+              <InsideSection.Footer>
                 react | javascript | typescript | react router | hooks | redux |
                 styled components
-              </InsideSection.Tools>
+              </InsideSection.Footer>
             </div>
 
             <InsideSection.Interval start_at="jun 2023" />
@@ -67,10 +70,10 @@ export default function WorkExperience() {
                 Useflow projects and learnt Flutter to implement an MVP mobile
                 app.
               </InsideSection.Description>
-              <InsideSection.Tools>
+              <InsideSection.Footer>
                 react | javascript | typescript | react router | hooks | redux |
                 styled components | flutter
-              </InsideSection.Tools>
+              </InsideSection.Footer>
             </div>
 
             <InsideSection.Interval start_at="feb 2023" finish_at="jun 2023" />
@@ -85,13 +88,13 @@ export default function WorkExperience() {
                 Coded a semi-humanized robot called Pepper with Python. Erasmus
                 internship.
               </InsideSection.Description>
-              <InsideSection.Tools>python</InsideSection.Tools>
+              <InsideSection.Footer>python</InsideSection.Footer>
             </div>
 
             <InsideSection.Interval start_at="jun 2019" finish_at="jul 2019" />
           </InsideSection.Root>
           <Button.Root
-            className="w-max text-slate-500 [&>.next-icon]:text-lg self-start"
+            className="w-max text-[var(--dark-100)] [&>.next-icon]:text-lg self-start"
             onClick={() => setCardState(true)}
           >
             read more
@@ -118,8 +121,8 @@ export default function WorkExperience() {
             <Text
               as="p"
               size="base"
-              weight="light"
-              className="mt-2 text-justify text-white"
+              weight="regular"
+              className="mt-2 text-justify text-[var(--white)]"
             >
               My journey as a developer began in 2019 when I undertook an
               internship at Camp Tecnologico in Bilbao during my month-long

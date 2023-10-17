@@ -55,7 +55,7 @@ function RenderResults() {
                 item.shortcut.map((item, key) => (
                   <span
                     key={key}
-                    className="w-[20px] h-[20px] rounded bg-[var(--primary)] flex justify-center items-center"
+                    className="w-[20px] h-[20px] rounded bg-[var(--dark-300)] flex justify-center items-center"
                   >
                     {item}
                   </span>

@@ -20,7 +20,7 @@ export default function Card({
   return (
     <div
       className={twMerge(
-        "w-full max-h-full overflow-auto max-w-[1000px] p-10 bg-zinc-900 rounded-md border border-zinc-800 shadow-xl animate-fade",
+        "w-full max-h-full overflow-auto max-w-[1000px] p-10 bg-[var(--dark-500)] rounded-md border border-[var(--dark-200)] shadow-xl animate-fade",
         className
       )}
     >
@@ -29,10 +29,10 @@ export default function Card({
           {title}
         </Text>
         <div className="w-min flex flex-row gap-2 group">
-          <Button.Root className="w-3 h-3 rounded-full bg-slate-500 group-hover:bg-green-400"></Button.Root>
-          <Button.Root className="w-3 h-3 rounded-full bg-slate-500 group-hover:bg-yellow-400"></Button.Root>
+          <Button.Root className="w-3 h-3 rounded-full bg-[var(--dark-100)] group-hover:bg-green-400"></Button.Root>
+          <Button.Root className="w-3 h-3 rounded-full bg-[var(--dark-100)] group-hover:bg-yellow-400"></Button.Root>
           <Button.Root
-            className="w-3 h-3 rounded-full bg-slate-500 group-hover:bg-red-400"
+            className="w-3 h-3 rounded-full bg-[var(--dark-100)] group-hover:bg-red-400"
             onClick={onClose}
           ></Button.Root>
         </div>

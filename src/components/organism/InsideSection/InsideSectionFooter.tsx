@@ -1,12 +1,12 @@
 import Text from "@/components/atom/Text";
 
-interface InsideSectionToolsProps {
+interface InsideSectionFooterProps {
   children: React.ReactNode;
 }
 
-export default function InsideSectionTools({
+export default function InsideSectionFooter({
   children,
-}: InsideSectionToolsProps) {
+}: InsideSectionFooterProps) {
   return (
     <Text as="p" size="base" className="text-cyan-800">
       {children}

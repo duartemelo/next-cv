@@ -4,7 +4,7 @@
 
 My personal portfolio/cv website made in NextJS and React.
 
-[Check it live here](https://google.com/) (still not live)
+[Check it live here](https://next-cv-seven.vercel.app/home)
 
 ## Technologies and Frameworks
 

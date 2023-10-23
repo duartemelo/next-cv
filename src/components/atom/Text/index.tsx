@@ -39,6 +39,7 @@ export default function Text({
         TextWeights[weight],
         TextAligns[align],
         italic ? "italic" : "not-italic",
+        'whitespace-pre-wrap',
         className
       )}
       as={as}

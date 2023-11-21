@@ -1,5 +1,15 @@
 const items = [
   {
+    projectTitle: "My own website (this one!)",
+    projectRepo: "https://github.com/duartemelo/next-cv/",
+    projectDescription: "My own 'Resume' website, made in NextJS and TailwindCSS.",
+    projectTools: "nextjs | react | tailwind",
+    startDate: "jul 2023",
+    endDate: undefined,
+  },
+
+
+  {
     projectTitle: "React Movies App",
     projectRepo: "https://github.com/duartemelo/react-movies-app",
     projectDescription:

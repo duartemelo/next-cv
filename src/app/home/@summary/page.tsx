@@ -4,7 +4,7 @@ import Section from "@/components/atom/Section";
 import Text from "@/components/atom/Text";
 import Image from "@/components/atom/Image";
 
-import profileImage from "@/assets/images/profile.jpg";
+import profileImage from "@/assets/images/profile.jpeg";
 import Card from "@/components/atom/Card";
 import Blur from "@/components/atom/Blur";
 import { useEffect, useState } from "react";

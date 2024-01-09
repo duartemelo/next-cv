@@ -14,21 +14,23 @@ export default function TimeInterval({
   finish_at,
 }: TimeIntervalProps) {
   return (
-    <div className="flex flex-col md:flex-1 max-w-[800px] items-center justify-center mt-2 md:mt-0">
-      <div className="flex flex-row w-[200px] justify-between">
-        <Text as="h3" weight="light" className="text-white">
-          {start_at}
-        </Text>
-        <Text as="h3" weight="light" className="text-white">
-          {finish_at}
-        </Text>
-      </div>
+    <div className="flex flex-col lg:flex-1 max-w-[800px] lg:items-end justify-center mt-2 md:mt-0 p-6">
+      <div className="flex flex-col items-center">
+        <div className="flex flex-row w-[200px] justify-between">
+          <Text as="h3" weight="light" className="text-white">
+            {start_at}
+          </Text>
+          <Text as="h3" weight="light" className="text-white">
+            {finish_at}
+          </Text>
+        </div>
 
-      <Image
-        src={finish_at ? jobDoneImage : jobCurrentImage}
-        alt="Job"
-        className="mt-2"
-      />
+        <Image
+          src={finish_at ? jobDoneImage : jobCurrentImage}
+          alt="Job"
+          className="mt-2"
+        />
+      </div>
     </div>
   );
 }

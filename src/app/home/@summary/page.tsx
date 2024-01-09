@@ -65,7 +65,7 @@ export default function Summary() {
             <Image
               src={profileImage}
               alt="Profile Image"
-              className="max-h-[400px] object-contain"
+              className="max-h-[400px] object-contain lg:object-right"
             />
           </div>
         </Section>

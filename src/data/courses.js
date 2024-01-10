@@ -1,5 +1,12 @@
 const items = [
   {
+    courseTitle: "ASP.NET Core 6 Web API Fundamentals",
+    courseDescription: "Pluralsight",
+    courseTools: "asp.net core | c# | entity framework | sql",
+    courseStart: "dec 2023",
+    courseEnd: "dec 2023",
+  },
+  {
     courseTitle: "Flutter & Dart - The Complete Guide [2023 Edition]",
     courseDescription: "Udemy - Maximilian Schwarzmuller",
     courseTools: "dart | flutter",

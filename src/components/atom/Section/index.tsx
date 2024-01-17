@@ -9,7 +9,7 @@ export default function Section({ children, className }: SectionProps) {
   return (
     <div
       className={twMerge(
-        "min-h-screen max-w-[1600px] mx-auto flex items-center self-center justify-center p-32",
+        "min-h-screen max-w-[1600px] mx-auto flex items-center self-center justify-center p-20",
         className
       )}
     >

@@ -27,8 +27,7 @@ export default function Profile() {
           align="center"
           italic={true}
         >
-          &quot;Design is not just what it looks like and feels like. Design is
-          how it works.&quot;
+          &quot;Programming isn't about what you know; it's about what you can figure out.”&quot;
         </Text>
         <div className="flex gap-4 mt-6 flex-col sm:flex-row">
           <Button.Root

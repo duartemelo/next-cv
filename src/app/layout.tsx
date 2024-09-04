@@ -8,7 +8,7 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
-  title: "Duarte Melo - Front-End Engineer",
+  title: "Duarte Melo - Software Engineer",
   description: "Duarte Melo - Software Engineer who focuses his efforts on creating beautiful and functional web applications",
 };
 
